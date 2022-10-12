@@ -15,4 +15,6 @@
     </Content>
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties wwwroot_4data_4products_1json__JsonSchema="https://appsemble.app/api.json" /></VisualStudio></ProjectExtensions>
+
 </Project>
