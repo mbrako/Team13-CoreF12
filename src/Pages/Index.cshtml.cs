@@ -1,28 +1,44 @@
-using System.Diagnostics;
+using System.Collections.Generic;
 
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
+using ContosoCrafts.WebSite.Models;
+using ContosoCrafts.WebSite.Services;
+
 namespace ContosoCrafts.WebSite.Pages
 {
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public class ErrorModel : PageModel
+    ///<summary>
+    ///Shiva Chaithanya
+    ///</summary>
+    /// <summary>
+    /// Myke Brako
+    /// </summary>
+
+    /// <summary>
+    /// pranindhar reddy
+    /// </summary>
+
+    /// <summary>
+    /// Vaishnavi Kulkarni
+    /// </summary>
+    public class IndexModel : PageModel
     {
-        public string RequestId { get; set; }
+        private readonly ILogger<IndexModel> _logger;
 
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
-
-        private readonly ILogger<ErrorModel> _logger;
-
-        public ErrorModel(ILogger<ErrorModel> logger)
+        public IndexModel(ILogger<IndexModel> logger,
+            JsonFileProductService productService)
         {
             _logger = logger;
+            ProductService = productService;
         }
+
+        public JsonFileProductService ProductService { get; }
+        public IEnumerable<ProductModel> Products { get; private set; }
 
         public void OnGet()
         {
-            RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+            Products = ProductService.GetAllData();
         }
     }
 }
