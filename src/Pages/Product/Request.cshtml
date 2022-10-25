@@ -1,0 +1,35 @@
+﻿@page
+@using ContosoCrafts.WebSite.Services
+@model RequestModel
+@{
+    ViewData["Title"] = "Request";
+}
+<div class="content">
+
+    <div class="container">
+        <table class="table table-bordered table-striped">
+            <a asp-page="Create" asp-route-id="">Create</a>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Seattle Public School</td>
+                    <td><a asp-page="Read" asp-route-id="">Read</a></td>
+                </tr>
+                <tr>
+                    <td>McDonald International School</td>
+                    <td><a asp-page="Read" asp-route-id="">Read</a></td>
+                </tr>
+                <tr>
+                    <td>Mercer Island School</td>
+                    <td><a asp-page="Read" asp-route-id="">Read</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
