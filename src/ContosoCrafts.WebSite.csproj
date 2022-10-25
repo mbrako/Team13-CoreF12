@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <Content Remove="Pages\Product\createform.cshtml" />
+    <Content Remove="Pages\AboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="wwwroot\data\products.json">
@@ -18,6 +19,12 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Pages\.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
   <ProjectExtensions><VisualStudio><UserProperties wwwroot_4data_4products_1json__JsonSchema="https://appsemble.app/api.json" /></VisualStudio></ProjectExtensions>
 
 </Project>
