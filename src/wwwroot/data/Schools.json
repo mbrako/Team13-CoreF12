@@ -1,0 +1,50 @@
+﻿[
+  {
+    "SchoolName": "@jenlooper",
+    "SchoolAddress": "2445 3rd Ave S, Seattle, WA 98134",
+    "SchoolEmail": "seattlepublic@edu.com",
+    "SchoolContactInfo": "2066667889",
+    "Items": [
+      {
+        "Name": "Laptop",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "SchoolName": "@jenlooper",
+    "SchoolAddress": "2005 4rd Ave S, Seattle, WA 98144",
+    "SchoolEmail": "Mcdonlad@edu.com",
+    "SchoolContactInfo": "2066667669",
+    "Items": [
+      {
+        "Name": "Projectors",
+        "quantity": 20
+      }
+    ]
+  },
+  {
+    "SchoolName": "@jenlooper",
+    "SchoolAddress": "2225 5rd Ave S, Seattle, WA 98114",
+    "SchoolEmail": "Mercer@edu.com",
+    "SchoolContactInfo": "2066667449",
+    "Items": [
+      {
+        "Name": "Laptop",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "SchoolName": "@jenlooper",
+    "SchoolAddress": "2445 3rd Ave S, Seattle, WA 98134",
+    "SchoolEmail": "Central@edu.com",
+    "SchoolContactInfo": "2066667119",
+    "Items": [
+      {
+        "Name": "Laptop",
+        "quantity": 2
+      }
+    ]
+  }, 
+]
