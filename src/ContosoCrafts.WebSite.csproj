@@ -11,7 +11,6 @@
 
   <ItemGroup>
     <Content Remove="Pages\Product\createform.cshtml" />
-    <Content Remove="Pages\AboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="wwwroot\data\products.json">
