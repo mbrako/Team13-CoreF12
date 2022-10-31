@@ -8,10 +8,12 @@ namespace ContosoCrafts.WebSite.Models
     public enum ProductTypeEnum
     {
         Undefined = 0,
-        Amature = 1,
-        Antique = 5,
-        Collectable = 130,
-        Commercial = 55,
+        Laptops = 1,
+        Projectors = 2,
+        Speakers = 3,
+        SmartBoards = 4,
+        Tablets = 5,
+        DigitalMarkers = 6,
     }
 
     public static class ProductTypeEnumExtensions
@@ -20,11 +22,13 @@ namespace ContosoCrafts.WebSite.Models
         {
             return data switch
             {
-                ProductTypeEnum.Amature => "Hand Made Items",
-                ProductTypeEnum.Antique => "Antiques",
-                ProductTypeEnum.Collectable => "Collectables",
-                ProductTypeEnum.Commercial => "Commercial goods",
- 
+                ProductTypeEnum.Laptops => "Electronic Items",
+                ProductTypeEnum.Projectors => "Electronic Items",
+                ProductTypeEnum.Speakers => "Electronic Items",
+                ProductTypeEnum.SmartBoards => "Electronic Items",
+                ProductTypeEnum.Tablets => "Electronic Items",
+                ProductTypeEnum.DigitalMarkers => "Electronic Items",
+
                 // Default, Unknown
                 _ => "",
             };
