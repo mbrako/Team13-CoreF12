@@ -21,7 +21,7 @@ namespace UnitTests.Pages.Index
         {
             var MockLoggerDirect = Mock.Of<ILogger<IndexModel>>();
 
-            pageModel = new IndexModel(MockLoggerDirect, TestHelper.ProductService)
+            pageModel = new IndexModel(MockLoggerDirect, TestHelper.ItemsService)
             {
             };
         }
@@ -39,7 +39,7 @@ namespace UnitTests.Pages.Index
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(true, pageModel.Products.ToList().Any());
+            Assert.AreEqual(true, pageModel.Items.ToList().Any());
         }
         #endregion OnGet
     }
