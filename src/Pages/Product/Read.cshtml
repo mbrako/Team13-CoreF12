@@ -1,0 +1,39 @@
+﻿@page "{id}"
+@using ContosoCrafts.WebSite.Services
+@inject JsonFileProductService ProductService
+@model ContosoCrafts.WebSite.Pages.Product.ReadModel
+@{
+    ViewData["Title"] = "Read page";
+}
+<h1>Read</h1>
+<a asp-page="" asp-route-id="">Update</a>
+<div class="content">
+    <h5 class="title">@Model.Product.SchoolName</h5>
+
+    <div class="container">
+        <p class="card-text">Electronic devices needed:</p>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Items</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Product.ItemsList)
+                {
+                    <tr>
+                        <td>@item.ProductType</td>
+                        <td>@item.Quantity</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <p class="card-text">Contact Information: </p>
+        <p class="card-text">@Model.Product.SchoolAddress</p>
+        <p class="card-text">Phone: @Model.Product.SchoolContactInfo</p>
+        <p class="card-text">Email: @Model.Product.SchoolEmail</p>
+        <p class="card-text">Please feel free to contact using the above information if you want to know more about the school/ want to donate any of the above items to the school.</p>
+    </div>
+
+</div>
