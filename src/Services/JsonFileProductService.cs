@@ -36,61 +36,6 @@ namespace ContosoCrafts.WebSite.Services
         }
 
         /// <summary>
-        /// Add Rating
-        /// 
-        /// Take in the product ID and the rating
-        /// If the rating does not exist, add it
-        /// Save the update
-        /// </summary>
-        /// <param name="productId"></param>
-        /// <param name="rating"></param>
-        public bool AddRating(string productId, int rating)
-        {
-            // If the ProductID is invalid, return
-            if (string.IsNullOrEmpty(productId))
-            {
-                return false;
-            }
-
-            var products = GetAllData();
-
-            // Look up the product, if it does not exist, return
-            var data = products.FirstOrDefault(x => x.Id.Equals(productId));
-            if (data == null)
-            {
-                return false;
-            }
-
-            // Check Rating for boundries, do not allow ratings below 0
-            if (rating < 0)
-            {
-                return false;
-            }
-
-            // Check Rating for boundries, do not allow ratings above 5
-            if (rating > 5)
-            {
-                return false;
-            }
-
-            // Check to see if the rating exist, if there are none, then create the array
-            if(data.Ratings == null)
-            {
-                data.Ratings = new int[] { };
-            }
-
-            // Add the Rating to the Array
-            var ratings = data.Ratings.ToList();
-            ratings.Add(rating);
-            data.Ratings = ratings.ToArray();
-
-            // Save the data back to the data store
-            SaveData(products);
-
-            return true;
-        }
-
-        /// <summary>
         /// Find the data record
         /// Update the fields
         /// Save to the data store
@@ -106,15 +51,12 @@ namespace ContosoCrafts.WebSite.Services
             }
 
             // Update the data to the new passed in values
-            productData.Title = data.Title;
-            productData.Description = data.Description.Trim();
-            productData.Url = data.Url;
-            productData.Image = data.Image;
+            productData.SchoolName = data.SchoolName;
+            productData.SchoolAddress = data.SchoolAddress.Trim();
+            productData.SchoolEmail = data.SchoolEmail;
+            productData.SchoolContactInfo = data.SchoolContactInfo;
 
-            productData.Quantity = data.Quantity;
-            productData.Price = data.Price;
-
-            productData.CommentList = data.CommentList;
+            productData.ItemsList = data.ItemsList;
 
             SaveData(products);
 
@@ -150,10 +92,10 @@ namespace ContosoCrafts.WebSite.Services
             var data = new ProductModel()
             {
                 Id = System.Guid.NewGuid().ToString(),
-                Title = "Enter Title",
-                Description = "Enter Description",
-                Url = "Enter URL",
-                Image = "",
+                SchoolName = "Enter School Name",
+                SchoolAddress = "Enter Complete School Address",
+                SchoolEmail = "Enter email",
+                SchoolContactInfo = "Enter School contact details",
             };
 
             // Get the current set, and append the new record to it becuase IEnumerable does not have Add
