@@ -28,7 +28,7 @@
       4,
       4
     ],
-    "ProductType": 55,
+    "ProductType": 1,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -41,7 +41,7 @@
     "Title": "Projectors: 50 projectors donated until now.",
     "Description": "Helps to visualize the concepts better.",
     "Ratings": null,
-    "ProductType": 1,
+    "ProductType": 2,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -54,7 +54,7 @@
     "Title": "Speakers: 60 projectors donated until now.",
     "Description": "To make sure that whatever is projected in class is audible to each student.",
     "Ratings": null,
-    "ProductType": 55,
+    "ProductType": 3,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -67,7 +67,7 @@
     "Title": "Smart Boards:  20 smartboards donated until now",
     "Description": "Smartboards surpass their simple whiteboard ancestors by recording what is written or turning a digital marker line into a tangible visual element.",
     "Ratings": null,
-    "ProductType": 1,
+    "ProductType": 4,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -80,7 +80,7 @@
     "Title": "Tablets: 30 tablets donated until now.",
     "Description": "Tablets help taking digital notes and are re-orienting information for all ages",
     "Ratings": null,
-    "ProductType": 55,
+    "ProductType": 5,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -95,7 +95,7 @@
     "Ratings": [
       4
     ],
-    "ProductType": 1,
+    "ProductType": 6,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
