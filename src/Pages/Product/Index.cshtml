@@ -1,0 +1,30 @@
+﻿@page
+@using ContosoCrafts.WebSite.Services
+@model IndexModel
+@{
+    ViewData["Title"] = "Index Page";
+}
+<div class="content">
+
+    <div class="container">
+        <table class="table table-bordered table-striped">
+            <a asp-page="NewRequest" asp-route-id="/NewRequest">+ New Request</a>
+           <thead>
+            <tr>
+                <th>School Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+                @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>@product.SchoolName</td>
+                    <td><a asp-page="Read" asp-route-id="@product.Id">Read</a></td>
+                </tr>
+            }
+        </tbody>
+        </table>
+    </div>
+
+</div>
