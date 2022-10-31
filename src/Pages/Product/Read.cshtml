@@ -6,7 +6,7 @@
     ViewData["Title"] = "Read page";
 }
 <h1>Read</h1>
-<a asp-page="" asp-route-id="">Update</a>
+<a href="/Product/Update/@Model.Product.Id" class="btn btn-primary">Update</a>
 <div class="content">
     <h5 class="title">@Model.Product.SchoolName</h5>
 
