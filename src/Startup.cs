@@ -21,6 +21,7 @@ namespace ContosoCrafts.WebSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages().AddRazorRuntimeCompilation();
+            services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddHttpClient();
             services.AddControllers();
@@ -51,6 +52,9 @@ namespace ContosoCrafts.WebSite
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{Controller=Items}/{action=Index}");
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
                 endpoints.MapBlazorHub();
