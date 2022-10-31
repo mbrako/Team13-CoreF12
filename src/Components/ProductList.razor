@@ -1,20 +1,20 @@
 @using ContosoCrafts.WebSite.Models
 @using ContosoCrafts.WebSite.Services
 @using Microsoft.AspNetCore.Components.Web
-@inject JsonFileProductService ProductService
+@inject JsonFileItemsService ItemsService
 
 <div class="card-columns">
-    @foreach (var product in ProductService.GetAllData())
+    @foreach (var item in ItemsService.GetAllData())
     {
         <div class="card">
-            <div class="card-img" style="background-image: url('@product.Image');">
+            <div class="card-img" style="background-image: url('@item.Image');">
             </div>
             <div class="card-body">
-                <h5 class="card-title">@product.Title</h5>
+                <h5 class="card-title">@item.Title</h5>
             </div>
             <div class="card-footer">
                 <small class="text-muted">
-                    <button @onclick="(e => SelectProduct(product.Id))"
+                    <button @onclick="(e => SelectProduct(item.Id))"
                         data-toggle="modal" data-target="#productModal" class="btn btn-primary">
                         More Info
                     </button>
@@ -75,13 +75,13 @@
 
 @code
 {
-    ProductModel selectedProduct;
+    ItemsModel selectedProduct;
     string selectedProductId;
 
     void SelectProduct(string productId)
     {
         selectedProductId = productId;
-        selectedProduct = ProductService.GetAllData().First(x => x.Id == productId);
+        selectedProduct = ItemsService.GetAllData().First(x => x.Id == productId);
         GetCurrentRating();
     }
 
@@ -109,7 +109,7 @@
     void SubmitRating(int rating)
     {
         System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
-        ProductService.AddRating(selectedProductId, rating);
+        ItemsService.AddRating(selectedProductId, rating);
         SelectProduct(selectedProductId);
     }
 }
