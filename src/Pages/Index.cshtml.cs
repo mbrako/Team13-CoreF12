@@ -27,18 +27,18 @@ namespace ContosoCrafts.WebSite.Pages
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger,
-            JsonFileProductService productService)
+            JsonFileItemsService itemsService)
         {
             _logger = logger;
-            ProductService = productService;
+            ItemsService = itemsService;
         }
 
-        public JsonFileProductService ProductService { get; }
-        public IEnumerable<ProductModel> Products { get; private set; }
+        public JsonFileItemsService ItemsService { get; }
+        public IEnumerable<ItemsModel> Items { get; private set; }
 
         public void OnGet()
         {
-            Products = ProductService.GetAllData();
+            Items = ItemsService.GetAllData();
         }
     }
 }
