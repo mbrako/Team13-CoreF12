@@ -1,96 +1,50 @@
 [
   {
-    "Id": "jenlooper-cactus",
-    "Maker": "@jenlooper",
-    "img": "https://thumbs.dreamstime.com/z/online-school-training-smart-happy-little-girl-glasses-smiles-teaches-lecture-using-laptop-sitting-table-room-184963981.jpg",
-    "Url": "https://www.dreamstime.com/photos-images/kid-laptop.html",
-    "Title": "Laptops: 128 laptops donated until now.",
-    "Description": "Help students in remote learning when they cannot attend school in person.",
-    "Ratings": [
-      5,
-      5,
-      3,
-      2,
-      1,
-      5,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4
-    ],
-    "ProductType": 55,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
+    "SchoolName": "@jenlooper",
+    "SchoolAddress": "2445 3rd Ave S, Seattle, WA 98134",
+    "SchoolEmail": "seattlepublic@edu.com",
+    "SchoolContactInfo": "2066667889",
+    "Items": [
+      {
+        "Name": "Laptop",
+        "quantity": 2
+      }
+    ]
   },
   {
-    "Id": "jenlooper-light",
-    "Maker": "jenlooper",
-    "img": "https://media.istockphoto.com/photos/classroom-slide-composited-in-picture-id184106979?s=612x612",
-    "Url": "https://www.istockphoto.com/photos/teacher-projector",
-    "Title": "Projectors: 50 projectors donated until now.",
-    "Description": "Helps to visualize the concepts better.",
-    "Ratings": null,
-    "ProductType": 1,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
+    "SchoolName": "@jenlooper",
+    "SchoolAddress": "2005 4rd Ave S, Seattle, WA 98144",
+    "SchoolEmail": "Mcdonlad@edu.com",
+    "SchoolContactInfo": "2066667669",
+    "Items": [
+      {
+        "Name": "Projectors",
+        "quantity": 20
+      }
+    ]
   },
   {
-    "Id": "jenlooper-lightshow",
-    "Maker": "@jenlooper",
-    "img": "https://pointerclicker.com/wp-content/uploads/2020/11/two-speakers-for-projector.webp",
-    "Url": "https://pointerclicker.com/best-external-speakers-for-projector/",
-    "Title": "Speakers: 60 projectors donated until now.",
-    "Description": "To make sure that whatever is projected in class is audible to each student.",
-    "Ratings": null,
-    "ProductType": 55,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
+    "SchoolName": "@jenlooper",
+    "SchoolAddress": "2225 5rd Ave S, Seattle, WA 98114",
+    "SchoolEmail": "Mercer@edu.com",
+    "SchoolContactInfo": "2066667449",
+    "Items": [
+      {
+        "Name": "Laptop",
+        "quantity": 2
+      }
+    ]
   },
   {
-    "Id": "jenlooper-survival",
-    "Maker": "jenlooper",
-    "img": "https://visionext.com.au/wp-content/uploads/2020/10/SMART-Board-in-school.jpg",
-    "Url": "https://visionext.com.au/amazing-free-smart-board-resources/",
-    "Title": "Smart Boards:  20 smartboards donated until now",
-    "Description": "Smartboards surpass their simple whiteboard ancestors by recording what is written or turning a digital marker line into a tangible visual element.",
-    "Ratings": null,
-    "ProductType": 1,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
-  },
-  {
-    "Id": "sailorhg-bubblesortpic",
-    "Maker": "sailorhg",
-    "img": "https://media.istockphoto.com/photos/happy-black-elementary-student-using-touchpad-on-a-class-picture-id1337570139",
-    "Url": "https://www.istockphoto.com/photos/kids-tablet-school",
-    "Title": "Tablets: 30 tablets donated until now.",
-    "Description": "Tablets help taking digital notes and are re-orienting information for all ages",
-    "Ratings": null,
-    "ProductType": 55,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
-  },
-  {
-    "Id": "sailorhg-corsage",
-    "Maker": "sailorhg",
-    "img": "https://cdn.shopify.com/s/files/1/2693/0976/products/smart_replacement_pens_580x.jpg?v=1545870683",
-    "Url": "https://smartboardparts.com/products/smart-replacement-pen-set-of-4",
-    "Title": "Digital Markers: 100 digital markers donated until now.",
-    "Description": "Needed with a smart board to explore the potentials of smartboards by students.",
-    "Ratings": [
-      4
-    ],
-    "ProductType": 1,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
+    "SchoolName": "@jenlooper",
+    "SchoolAddress": "2445 3rd Ave S, Seattle, WA 98134",
+    "SchoolEmail": "Central@edu.com",
+    "SchoolContactInfo": "2066667119",
+    "Items": [
+      {
+        "Name": "Laptop",
+        "quantity": 2
+      }
+    ]
   }
 ]
