@@ -62,7 +62,15 @@ namespace ContosoCrafts.WebSite.Services
 
             return productData;
         }
-
+        /// <summary>
+        /// Retrive a single product in the data storage
+        /// </summary>
+        /// <param name="id">The id of the product to retrive</param>
+        /// <returns>The product with the given id or null if not found</returns>
+        public ProductModel GetProduct(string id)
+        {
+            return GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+        }
         /// <summary>
         /// Save All products data to storage
         /// </summary>
