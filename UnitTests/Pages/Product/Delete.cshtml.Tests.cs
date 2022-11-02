@@ -32,7 +32,7 @@ namespace UnitTests.Pages.Product.Delete
             // Arrange
 
             // Act
-            pageModel.OnGet("Seattle Public School");
+            pageModel.OnGet("23");
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
