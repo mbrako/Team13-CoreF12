@@ -1,10 +1,12 @@
 ﻿@page "{id}"
 @using ContosoCrafts.WebSite.Services
-@inject JsonFileProductService ProductService
 @model ContosoCrafts.WebSite.Pages.Product.ReadModel
 @{
     ViewData["Title"] = "Read page";
 }
+
+
+
 <h1>Read</h1>
 
 <div class="content">
@@ -20,11 +22,57 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model.Product.ItemsList)
+                @if (!@Model.Product.LaptopQuantity.Equals("0") && @Model.Product.LaptopQuantity != null)
                 {
                     <tr>
-                        <td>@item.ProductType</td>
-                        <td>@item.Quantity</td>
+                        <td>Laptops</td>
+
+                        <td>@Model.Product.LaptopQuantity</td>
+                    </tr>
+                }
+                @if (@Model.Product.ProjectorsQuantity != null && !@Model.Product.ProjectorsQuantity.Equals("0"))
+                {
+                    <tr>
+                        <td>Projectors</td>
+
+                        <td>@Model.Product.ProjectorsQuantity</td>
+
+                    </tr>
+                }
+                @if (!@Model.Product.SpeakersQuantity.Equals("0") && @Model.Product.SpeakersQuantity != null)
+                {
+                    <tr>
+                        <td>Speakers</td>
+
+                        <td>@Model.Product.SpeakersQuantity</td>
+
+                    </tr>
+                }
+                @if (!@Model.Product.SmartBoardsQuantity.Equals("0") && @Model.Product.SmartBoardsQuantity != null)
+                {
+                    <tr>
+                        <td>Smart Boards</td>
+
+                        <td>@Model.Product.SmartBoardsQuantity</td>
+
+                    </tr>
+                }
+                @if (!@Model.Product.TabletsQuantity.Equals("0") && @Model.Product.TabletsQuantity != null)
+                {
+                    <tr>
+                        <td>Tablets</td>
+
+                        <td>@Model.Product.TabletsQuantity</td>
+
+                    </tr>
+                }
+                @if (!@Model.Product.DigitalMarkersQuantity.Equals("0") && @Model.Product.DigitalMarkersQuantity != null)
+                {
+                    <tr>
+                        <td>Digital Markers</td>
+
+                        <td>@Model.Product.DigitalMarkersQuantity</td>
+
                     </tr>
                 }
             </tbody>

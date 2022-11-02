@@ -1,54 +1,86 @@
 ﻿@page "{id}"
 @using ContosoCrafts.WebSite.Services
-@model ContosoCrafts.WebSite.Pages.Product.CreateModel
+@inject JsonFileProductService ProductService
+@model ContosoCrafts.WebSite.Pages.Product.UpdateModel
 @{
     ViewData["Title"] = "Update Page";
 }
 
 <div class="content">
 
-    <div class="container">
-        <h2 class="title">Update Existing Charitable Request</h2>
-        <form method="post"> 
+  <div class="container">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @Html.HiddenFor(x => x.Product.Id)
+
+        <div class="form-group">
+            <label asp-for="Product.SchoolName" class="control-label"></label>
+            <input asp-for="Product.SchoolName" class="form-control" />
+            <span asp-validation-for="Product.SchoolName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.SchoolAddress" class="control-label"></label>
+            <input asp-for="Product.SchoolAddress" class="form-control" />
+            <span asp-validation-for="Product.SchoolAddress" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.SchoolEmail" class="control-label"></label>
+                <input asp-for="Product.SchoolEmail" class="form-control" />
+                <span asp-validation-for="Product.SchoolEmail" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.SchoolContactInfo" class="control-label"></label>
+                <input asp-for="Product.SchoolContactInfo" class="form-control" />
+                <span asp-validation-for="Product.SchoolContactInfo" class="text-danger"></span>
+        </div>
+
             <div class="form-group">
-                <label class="control-label" for="school_name">School Name</label>
-                <input class="form-control" type="text" />
+                <label asp-for="Product.LaptopQuantity" class="control-label"></label>
+                <input asp-for="Product.LaptopQuantity" class="form-control" />
+                <span asp-validation-for="Product.LaptopQuantity" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label class="control-label" for="school_address">School Address</label>
-                <input class="form-control" type="text" />
+                <label asp-for="Product.ProjectorsQuantity" class="control-label"></label>
+                <input asp-for="Product.SchoolContactInfo" class="form-control" />
+                <span asp-validation-for="Product.SchoolContactInfo" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label class="control-label" for="school_email">School Email</label>
-                <input class="form-control" type="email" />
+            <label asp-for="Product.SpeakersQuantity" class="control-label"></label>
+                <input asp-for="Product.SpeakersQuantity" class="form-control" />
+                <span asp-validation-for="Product.SpeakersQuantity" class="text-danger"></span>
+        </div>
+
+            <div class="form-group">
+                <label asp-for="Product.SmartBoardsQuantity" class="control-label"></label>
+                <input asp-for="Product.SmartBoardsQuantity" class="form-control" />
+                <span asp-validation-for="Product.SmartBoardsQuantity" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label class="control-label" for="school_contactinfo">School_Contact</label>
-                <input class="form-control" type="number" />
-            </div>
+            <label asp-for="Product.TabletsQuantity" class="control-label"></label>
+                <input asp-for="Product.TabletsQuantity" class="form-control" />
+                <span asp-validation-for="Product.TabletsQuantity" class="text-danger"></span>
+        </div>
 
-            <div class="form-group">
-                <label class="control-label" for="items">Items:</label>
-                <select id="items" name="items" size="6" multiple>
-                    <option value="laptop">Laptop</option>
-                    <option value="projectors">Projectors</option>
-                    <option value="tablets">Tablets</option>
-                    <option value="speakers">Speakers</option>
-                    <option value="smartboards">SmartBoards</option>
-                    <option value="digitalmarkers">DigitalMarkers</option>
-                </select>
-                <div class="form-group">
-                    <label class="control-label" for="quantity">Quantity</label>
-                    <input class="form-control" type="number" />
-                </div>
+        <div class="form-group">
+            <label asp-for="Product.DigitalMarkersQuantity" class="control-label"></label>
+                <input asp-for="Product.DigitalMarkersQuantity" class="form-control" />
+                <span asp-validation-for="Product.DigitalMarkersQuantity" class="text-danger"></span>
+        </div>
 
-                <div class="form-group">
-                    <input type="submit" value="Save" class="btn btn-primary" />
-                </div>
-            </div>
-        </form>
-    </div>
+
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    </form>
+
 </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
