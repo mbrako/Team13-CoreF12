@@ -19,7 +19,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <summary>
         /// Defualt Construtor
         /// </summary>
-        /// <param name="logger"></param>
         /// <param name="productService"></param>
         public UpdateModel(JsonFileProductService productService)
         {
