@@ -21,9 +21,17 @@ namespace ContosoCrafts.WebSite.Models
         [StringLength(maximumLength: 13, MinimumLength = 10, ErrorMessage = "The email should have a length of more than {2} and less than {1}")]
         public string SchoolContactInfo { get; set; }
 
-        // Store the Comments entered by the users on this product
-        [JsonPropertyName("Items")]
-        public List<ItemsModel> ItemsList { get; set; } = new List<ItemsModel>();
+        public string LaptopQuantity { get; set; }
+
+        public string ProjectorsQuantity { get; set; }
+
+        public string SpeakersQuantity { get; set; }
+
+        public string SmartBoardsQuantity { get; set; }
+
+        public string TabletsQuantity { get; set; }
+
+        public string DigitalMarkersQuantity { get; set; }
 
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
 
