@@ -5,8 +5,12 @@ using System.Text.Json;
 
 namespace ContosoCrafts.WebSite.Models
 {
+    /// <summary>
+    /// Items that schools can raise a request for assistance.
+    /// </summary>
     public class ItemsModel
     {
+        // The ID for the items
         public string Id { get; set; }
         public string Maker { get; set; }
 
