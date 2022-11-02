@@ -50,18 +50,5 @@
     "SmartBoardsQuantity": "0",
     "TabletsQuantity": "0",
     "DigitalMarkersQuantity": "10"
-  },
-  {
-    "Id": "eedeb73f-b344-46fc-a381-919e36b584c6",
-    "SchoolName": "ABC",
-    "SchoolAddress": "gehwfshsfsjdfhjsdf",
-    "SchoolEmail": "abcertgfrtt@abc.edu",
-    "SchoolContactInfo": "12345678765",
-    "LaptopQuantity": "2",
-    "ProjectorsQuantity": null,
-    "SpeakersQuantity": "0",
-    "SmartBoardsQuantity": "0",
-    "TabletsQuantity": "0",
-    "DigitalMarkersQuantity": "0"
   }
 ]
