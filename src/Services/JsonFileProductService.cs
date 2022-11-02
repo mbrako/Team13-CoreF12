@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -131,6 +132,10 @@ namespace ContosoCrafts.WebSite.Services
 
             return data;
         }
-        
+
+        public object AddRating(object value, int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
