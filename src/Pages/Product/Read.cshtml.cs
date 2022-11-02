@@ -7,6 +7,9 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+    /// <summary>
+    /// Read Page will return the school data for the id passed by the Index page
+    /// </summary>
     public class ReadModel : PageModel
     {
         // Data middletier
@@ -15,7 +18,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <summary>
         /// Defualt Construtor
         /// </summary>
-        /// <param name="logger"></param>
         /// <param name="productService"></param>
         public ReadModel(JsonFileProductService productService)
         {
