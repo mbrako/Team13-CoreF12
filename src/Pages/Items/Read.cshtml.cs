@@ -7,6 +7,9 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Items
 {
+    /// <summary>
+    /// Read Page will return the items data for the id passed by the Index page
+    /// </summary>
     public class ReadModel : PageModel
     {
         // Data middletier
@@ -15,7 +18,6 @@ namespace ContosoCrafts.WebSite.Pages.Items
         /// <summary>
         /// Defualt Construtor
         /// </summary>
-        /// <param name="logger"></param>
         /// <param name="itemsService"></param>
         public ReadModel(JsonFileItemsService itemsService)
         {
