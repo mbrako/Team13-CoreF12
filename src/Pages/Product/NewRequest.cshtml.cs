@@ -6,6 +6,9 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+    /// <summary>
+    /// New Request Page will create a new request for the data entered by a user/requester
+    /// </summary>
     public class NewRequestModel : PageModel
     {
         // Data middle tier
@@ -14,14 +17,13 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <summary>
         /// Defualt Construtor
         /// </summary>
-        /// <param name="logger"></param>
         /// <param name="productService"></param>
         public NewRequestModel(JsonFileProductService productService)
         {
             ProductService = productService;
         }
 
-        // The data to show
+        // The data to display
         public ProductModel Product;
 
         /// <summary>
