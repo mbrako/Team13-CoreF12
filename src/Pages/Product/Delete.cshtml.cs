@@ -6,7 +6,7 @@ using ContosoCrafts.WebSite.Models;
 namespace ContosoCrafts.WebSite.Pages.Product
 {
     /// <summary>
-    /// The delete model page for the a restaurant.
+    /// The delete model page for the school
     /// </summary>
     public class DeleteModel : PageModel
     {
@@ -27,7 +27,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         }
 
         /// <summary>
-        /// REST Get request to show to-be-deleted product info
+        /// REST Get request to show the info for the school to be deleted
         /// </summary>
         public void OnGet(string id)
         {
@@ -36,7 +36,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         }
 
         /// <summary>
-        /// REST Post request to delete existing product
+        /// REST Post request to delete existing school
         /// </summary>
         /// <returns>Redirect to Index Page after deletion</returns>
         public IActionResult OnPost()
@@ -47,7 +47,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
             }
 
             ProductService.DeleteData(Product.Id);
-            // Redirect user to the deleted restaurant detail page
+            // Redirect user to the Index page
             return RedirectToPage("./Index");
         }
     }
