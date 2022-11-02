@@ -8,7 +8,7 @@ using ContosoCrafts.WebSite.Services;
 namespace ContosoCrafts.WebSite.Pages.Items
 {
     /// <summary>
-    /// Index Page will return all the data to show
+    /// Index Page will return all the items to show
     /// </summary>
     public class IndexModel : PageModel
     {
