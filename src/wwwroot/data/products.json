@@ -1,29 +1,25 @@
 [
   {
-    "Id": "23",
-    "SchoolName": "Seattle Public School",
-    "SchoolAddress": "2445 3rd Ave S, Seattle, WA 98134",
-    "SchoolEmail": "seattlepublic@edu.com",
-    "SchoolContactInfo": "\u002B1 2066667889",
-    "LaptopQuantity": "2",
-    "ProjectorsQuantity": "0",
-    "SpeakersQuantity": "0",
-    "SmartBoardsQuantity": "0",
-    "TabletsQuantity": "0",
-    "DigitalMarkersQuantity": "0"
-  },
-  {
     "Id": "34",
     "SchoolName": "McDonald International School",
     "SchoolAddress": "12th Ave, Madison Street, Seattle WA",
     "SchoolEmail": "Mcdonlad@edu.com",
     "SchoolContactInfo": "\u002B1 2345436776",
-    "LaptopQuantity": "0",
-    "ProjectorsQuantity": "5",
-    "SpeakersQuantity": "0",
-    "SmartBoardsQuantity": "0",
-    "TabletsQuantity": "0",
-    "DigitalMarkersQuantity": "0"
+    "Items": [
+      {
+        "Id": "jenlooper-light",
+        "Maker": "jenlooper",
+        "img": "https://media.istockphoto.com/photos/classroom-slide-composited-in-picture-id184106979?s=612x612",
+        "Url": "https://www.istockphoto.com/photos/teacher-projector",
+        "Title": "Projectors: 50 projectors donated until now.",
+        "Description": "Helps to visualize the concepts better.",
+        "Ratings": null,
+        "ProductType": 2,
+        "Quantity": "2",
+        "Price": 0,
+        "CommentList": []
+      }
+    ]
   },
   {
     "Id": "35",
@@ -31,12 +27,21 @@
     "SchoolAddress": "2225 5th Ave S, Seattle, WA 98114",
     "SchoolEmail": "Mercer@edu.com",
     "SchoolContactInfo": "\u002B1 2066667500",
-    "LaptopQuantity": "0",
-    "ProjectorsQuantity": "5",
-    "SpeakersQuantity": "6",
-    "SmartBoardsQuantity": "0",
-    "TabletsQuantity": "0",
-    "DigitalMarkersQuantity": "0"
+    "Items": [
+      {
+        "Id": "jenlooper-light",
+        "Maker": "jenlooper",
+        "img": "https://media.istockphoto.com/photos/classroom-slide-composited-in-picture-id184106979?s=612x612",
+        "Url": "https://www.istockphoto.com/photos/teacher-projector",
+        "Title": "Projectors: 50 projectors donated until now.",
+        "Description": "Helps to visualize the concepts better.",
+        "Ratings": null,
+        "ProductType": 2,
+        "Quantity": "6",
+        "Price": 0,
+        "CommentList": []
+      }
+    ]
   },
   {
     "Id": "38",
@@ -44,24 +49,35 @@
     "SchoolAddress": "12th Ave, Madison Street, Seattle WA",
     "SchoolEmail": "rainbow@edu.com",
     "SchoolContactInfo": "\u002B1 2345436776",
-    "LaptopQuantity": "0",
-    "ProjectorsQuantity": "3",
-    "SpeakersQuantity": "6",
-    "SmartBoardsQuantity": "0",
-    "TabletsQuantity": "0",
-    "DigitalMarkersQuantity": "10"
-  },
-  {
-    "Id": "eedeb73f-b344-46fc-a381-919e36b584c6",
-    "SchoolName": "ABC",
-    "SchoolAddress": "gehwfshsfsjdfhjsdf",
-    "SchoolEmail": "abcertgfrtt@abc.edu",
-    "SchoolContactInfo": "12345678765",
-    "LaptopQuantity": "2",
-    "ProjectorsQuantity": null,
-    "SpeakersQuantity": "0",
-    "SmartBoardsQuantity": "0",
-    "TabletsQuantity": "0",
-    "DigitalMarkersQuantity": "0"
+    "Items": [
+      {
+        "Id": "jenlooper-survival",
+        "Maker": "jenlooper",
+        "img": "https://visionext.com.au/wp-content/uploads/2020/10/SMART-Board-in-school.jpg",
+        "Url": "https://visionext.com.au/amazing-free-smart-board-resources/",
+        "Title": "Smart Boards:  20 smartboards donated until now",
+        "Description": "Smartboards surpass their simple whiteboard ancestors by recording what is written or turning a digital marker line into a tangible visual element.",
+        "Ratings": null,
+        "ProductType": 4,
+        "Quantity": "5",
+        "Price": 0,
+        "CommentList": []
+      },
+      {
+        "Id": "sailorhg-corsage",
+        "Maker": "sailorhg",
+        "img": "https://cdn.shopify.com/s/files/1/2693/0976/products/smart_replacement_pens_580x.jpg?v=1545870683",
+        "Url": "https://smartboardparts.com/products/smart-replacement-pen-set-of-4",
+        "Title": "Digital Markers: 100 digital markers donated until now.",
+        "Description": "Needed with a smart board to explore the potentials of smartboards by students.",
+        "Ratings": [
+          4
+        ],
+        "ProductType": 6,
+        "Quantity": "10",
+        "Price": 0,
+        "CommentList": []
+      }
+    ]
   }
 ]

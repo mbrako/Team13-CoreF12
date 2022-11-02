@@ -56,12 +56,8 @@ namespace ContosoCrafts.WebSite.Services
             productData.SchoolAddress = data.SchoolAddress.Trim();
             productData.SchoolEmail = data.SchoolEmail;
             productData.SchoolContactInfo = data.SchoolContactInfo;
-            productData.LaptopQuantity = data.LaptopQuantity;
-            productData.ProjectorsQuantity = data.ProjectorsQuantity;
-            productData.SpeakersQuantity = data.SpeakersQuantity;
-            productData.SmartBoardsQuantity = data.SmartBoardsQuantity;
-            productData.TabletsQuantity = data.TabletsQuantity;
-            productData.DigitalMarkersQuantity = data.DigitalMarkersQuantity;
+
+            productData.ItemsList = data.ItemsList;
 
             SaveData(products);
 
