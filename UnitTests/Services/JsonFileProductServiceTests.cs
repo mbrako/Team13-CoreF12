@@ -1,17 +1,28 @@
-using System.Linq;
-
-using Microsoft.AspNetCore.Mvc;
-
-using NUnit.Framework;
-
-using ContosoCrafts.WebSite.Models;
-
-namespace UnitTests.Pages.Product.AddRating
+namespace UnitTests.Services
 {
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Text.Json;
+
+    using Bunit.Extensions;
+
+    using ContosoCrafts.WebSite.Models;
+
+    using NUnit.Framework;
+
+    /// <summary>
+    /// This class holds the tests for the main JsonFileProductService class.
+    /// </summary>
     public class JsonFileProductServiceTests
     {
+
         #region TestSetup
 
+
+        /// <summary>
+        /// Initialize tests for JsonFileProductService class
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -19,52 +30,102 @@ namespace UnitTests.Pages.Product.AddRating
 
         #endregion TestSetup
 
-        #region AddRating
+
+        #region GetAllData
+
+        /// <summary>
+        /// Test of invalid state for GetAllData method
+        /// </summary>
         [Test]
-        public void AddRating_InValid_Product_Null_Should_Return_False()
+        public void GetAllData_Invalid_Does_Not_Return_Null_Or_Empty_Should_Return_False()
         {
             // Arrange
 
             // Act
-            var result = TestHelper.ProductService.AddRating(null, 1);
+            var result = TestHelper.ProductService.GetAllData();
 
             // Assert
-            Assert.AreEqual(false, result);
+            Assert.AreEqual(false, result.IsNullOrEmpty());
         }
 
+        /// <summary>
+        /// Test for valid result of GetAllData method
+        /// </summary>
         [Test]
-        public void AddRating_InValid_()
+        public void GetAllData_Valid_Returns_Contents_Of_Json_File_Should_Return_True()
         {
             // Arrange
 
+            // read JSON file directly and convert to a string for comparison
+            var jsonFileReader = File.OpenText("..\\..\\..\\..\\src\\wwwroot\\data\\articles.json");
+
+            IEnumerable<ProductModel> expected = JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+
             // Act
-            //var result = TestHelper.ProductService.AddRating(null, 1);
+            var result = TestHelper.ProductService.GetAllData();
 
             // Assert
-            //Assert.AreEqual(false, result);
+            Assert.AreEqual(expected.ToString(), result.ToString());
         }
 
-        // ....
+        #endregion GetAllData
 
-     /*   [Test]
-        public void AddRating_Valid_Product_Valid_Rating_Valid_Should_Return_True()
+        
+
+        #region CreateData
+
+        /// <summary>
+        /// Testing typical, valid usage of CreateData method
+        /// </summary>
+        [Test]
+        public void CreateData_Valid_Last_Value_Matches_Created_Values_Should_Return_True()
         {
             // Arrange
 
-            // Get the First data item
-            var data = TestHelper.ProductService.GetAllData().First();
-            var countOriginal = data.Ratings.Length;
-
             // Act
-            var result = TestHelper.ProductService.AddRating(data.Id, 5);
-            var dataNewList = TestHelper.ProductService.GetAllData().First();
+            var result = TestHelper.ProductService.CreateData();
+            var last = TestHelper.ProductService.GetAllData().Last();
 
             // Assert
-            Assert.AreEqual(true, result);
-            Assert.AreEqual(countOriginal + 1, dataNewList.Ratings.Length);
-            Assert.AreEqual(5, dataNewList.Ratings.Last());
-        }*/
-        #endregion AddRating
+            Assert.AreEqual("Enter Title", result.SchoolName);
+            Assert.AreEqual("Enter Description", result.SchoolAddress);
+            Assert.AreEqual("Enter URL", result.SchoolContactInfo);
+            Assert.AreEqual("", result.SchoolEmail);
+            Assert.AreEqual(result.Id, last.Id);
+        }
+        #endregion CreateData
+
+        #region UpdateData
+
+        /// <summary>
+        /// Testing typical, valid usage of UpdateData method
+        /// </summary>
+        [Test]
+        public void UpdateData_Valid_Updated_Value_Matches_Should_Return_True()
+        {
+            // Arrange
+            var data = TestHelper.ProductService.GetAllData().FirstOrDefault();
+            var data2 = data;
+            data2.Title = "Test";
+
+            // Act
+            var result = TestHelper.ProductService.UpdateData(data2);
+
+            // Reset
+            _ = TestHelper.ProductService.UpdateData(data);
+
+            // Assert
+            Assert.AreEqual(data2.Title, result.Title);
+        }
+
+
+
+        #endregion UpdateData
+
 
     }
 }
