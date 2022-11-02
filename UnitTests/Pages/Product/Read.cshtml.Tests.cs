@@ -26,7 +26,7 @@ namespace UnitTests.Pages.Product.Read
         {
             // Arrange
             // Act
-            pageModel.OnGet("Mercer Island School");
+            pageModel.OnGet("35");
             // Assert
             Assert.AreEqual("Mercer Island School", pageModel.Product.SchoolName);
         }
@@ -35,7 +35,7 @@ namespace UnitTests.Pages.Product.Read
         public void OnGet_Valid_Should_Return_Products_ToString()
         {
             // Arrange
-            pageModel.OnGet("Mercer Island School");
+            pageModel.OnGet("35");
             // Act
             string dogString = pageModel.Product.ToString();
             // Assert
