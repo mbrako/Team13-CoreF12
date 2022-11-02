@@ -1,54 +1,8 @@
-﻿@page "{id}"
+﻿@page
 @using ContosoCrafts.WebSite.Services
-@model ContosoCrafts.WebSite.Pages.Product.CreateModel
+@inject JsonFileProductService ProductService
+@model ContosoCrafts.WebSite.Pages.Product.NewRequestModel
+
 @{
-    ViewData["Title"] = "Create Page";
+    ViewData["Title"] = "New Request page";
 }
-
-<div class="content">
-
-    <div class="container">
-        <h2 class="title">Create New Charitable Request</h2>
-        <form method="post">
-            <div class="form-group">
-                <label class="control-label" for="school_name">School Name</label>
-                <input class="form-control" type="text"/>
-            </div>
-
-            <div class="form-group">
-                <label class="control-label" for="school_address">School Address</label>
-                <input class="form-control" type="text"/>
-            </div>
-
-            <div class="form-group">
-                <label class="control-label" for="school_email">School Email</label>
-                <input class="form-control" type="email"/>
-            </div>
-
-            <div class="form-group">
-                <label class="control-label" for="school_contactinfo">School_Contact</label>
-                <input class="form-control" type="number"/>
-            </div>
-
-            <div class="form-group">
-                <label class="control-label" for="items">Items:</label>
-                <select id="items" name="items" size="6" multiple>
-                    <option value="laptop">Laptop</option>
-                    <option value="projectors">Projectors</option>
-                    <option value="tablets">Tablets</option>
-                    <option value="speakers">Speakers</option>
-                    <option value="smartboards">SmartBoards</option>
-                    <option value="digitalmarkers">DigitalMarkers</option>
-                </select>
-                <div class="form-group">
-                    <label class="control-label" for="quantity">Quantity</label>
-                    <input class="form-control" type="number" />
-                </div>
-
-                <div class="form-group">
-                    <input type="submit" value="Save" class="btn btn-primary" />
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
