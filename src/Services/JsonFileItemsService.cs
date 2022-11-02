@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
@@ -110,5 +111,9 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
+        internal object CreateData()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

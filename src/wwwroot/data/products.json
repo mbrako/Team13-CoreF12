@@ -1,35 +1,10 @@
 [
   {
-    "Id": "23",
-    "SchoolName": "Seattle Public School",
-    "SchoolAddress": "2445 3rd Ave S, Seattle, WA 98134",
-    "SchoolEmail": "seattlepublic@edu.com",
-    "SchoolContactInfo": "+1 2066667889",
-    "Items": [
-      {
-        "Id": "jenlooper-cactus",
-        "Maker": "@jenlooper",
-        "img": "https://thumbs.dreamstime.com/z/online-school-training-smart-happy-little-girl-glasses-smiles-teaches-lecture-using-laptop-sitting-table-room-184963981.jpg",
-        "Url": "https://www.dreamstime.com/photos-images/kid-laptop.html",
-        "Title": "Laptops: 128 laptops donated until now.",
-        "Description": "Help students in remote learning when they cannot attend school in person.",
-        "Ratings": [
-          5,
-          4
-        ],
-        "ProductType": 1,
-        "Quantity": "5",
-        "Price": 0,
-        "CommentList": []
-      }
-    ]
-  },
-  {
     "Id": "34",
     "SchoolName": "McDonald International School",
     "SchoolAddress": "12th Ave, Madison Street, Seattle WA",
     "SchoolEmail": "Mcdonlad@edu.com",
-    "SchoolContactInfo": "+1 2345436776",
+    "SchoolContactInfo": "\u002B1 2345436776",
     "Items": [
       {
         "Id": "jenlooper-light",
@@ -51,7 +26,7 @@
     "SchoolName": "Mercer Island School",
     "SchoolAddress": "2225 5th Ave S, Seattle, WA 98114",
     "SchoolEmail": "Mercer@edu.com",
-    "SchoolContactInfo": "+1 2066667500",
+    "SchoolContactInfo": "\u002B1 2066667500",
     "Items": [
       {
         "Id": "jenlooper-light",
@@ -73,7 +48,7 @@
     "SchoolName": "The Rainbow School",
     "SchoolAddress": "12th Ave, Madison Street, Seattle WA",
     "SchoolEmail": "rainbow@edu.com",
-    "SchoolContactInfo": "+1 2345436776",
+    "SchoolContactInfo": "\u002B1 2345436776",
     "Items": [
       {
         "Id": "jenlooper-survival",
