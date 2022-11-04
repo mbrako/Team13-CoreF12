@@ -57,7 +57,7 @@ namespace UnitTests.Services
             // Arrange
 
             // read JSON file directly and convert to a string for comparison
-            var jsonFileReader = File.OpenText("..\\..\\..\\..\\src\\wwwroot\\data\\articles.json");
+            var jsonFileReader = File.OpenText("..\\..\\..\\..\\src\\wwwroot\\data\\products.json");
 
             IEnumerable<ProductModel> expected = JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
@@ -91,10 +91,10 @@ namespace UnitTests.Services
             var last = TestHelper.ProductService.GetAllData().Last();
 
             // Assert
-            Assert.AreEqual("Enter Title", result.SchoolName);
-            Assert.AreEqual("Enter Description", result.SchoolAddress);
-            Assert.AreEqual("Enter URL", result.SchoolContactInfo);
-            Assert.AreEqual("", result.SchoolEmail);
+            Assert.AreEqual("Enter School Name", result.SchoolName);
+            Assert.AreEqual("Enter Complete School Address", result.SchoolAddress);
+            Assert.AreEqual("Enter School contact details", result.SchoolContactInfo);
+            Assert.AreEqual("Enter email", result.SchoolEmail);
             Assert.AreEqual(result.Id, last.Id);
         }
         #endregion CreateData
@@ -110,7 +110,7 @@ namespace UnitTests.Services
             // Arrange
             var data = TestHelper.ProductService.GetAllData().FirstOrDefault();
             var data2 = data;
-            data2.Title = "Test";
+            data2.SchoolName = "Test";
 
             // Act
             var result = TestHelper.ProductService.UpdateData(data2);
@@ -119,7 +119,7 @@ namespace UnitTests.Services
             _ = TestHelper.ProductService.UpdateData(data);
 
             // Assert
-            Assert.AreEqual(data2.Title, result.Title);
+            Assert.AreEqual(data2.SchoolName, result.SchoolName);
         }
 
 

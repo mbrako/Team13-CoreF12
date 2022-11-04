@@ -43,13 +43,13 @@
 
 
             // Act
-            pageModel.OnGet("selinazawacki-shirt");
+            pageModel.OnGet("23");
 
 
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual("Floppy Crop", pageModel.Product.SchoolName);
+            Assert.AreEqual("Seattle Public School", pageModel.Product.SchoolName);
         }
         #endregion OnGet
 
@@ -62,7 +62,7 @@
             // Arrange
             pageModel.Product = new ProductModel
             {
-                Id = "selinazawacki-moon",
+                Id = "23",
                 SchoolName = "name",
                 SchoolAddress = "Address",
                 SchoolContactInfo = "ContactInfo",

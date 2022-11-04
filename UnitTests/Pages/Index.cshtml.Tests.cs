@@ -30,11 +30,8 @@ namespace UnitTests.Pages.Index
 
         #region OnGet
         [Test]
-        public void OnGet_Valid_Should_Return_Products()
+        public void OnGet_Valid_Should_Return_Products(IndexModel pageModel)
         {
-            // Arrange
-
-            // Act
             pageModel.OnGet();
 
             // Assert

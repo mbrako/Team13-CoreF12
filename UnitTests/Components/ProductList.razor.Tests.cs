@@ -25,7 +25,7 @@ namespace UnitTests.Components
         public void ProductList_Default_Should_Return_Content()
         {
             // Arrange
-            Services.AddSingleton<JsonFileItemsService>(TestHelper.ItemsService);
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
 
             // Act
             var page = RenderComponent<ProductList>();
