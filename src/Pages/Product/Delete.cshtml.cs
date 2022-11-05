@@ -5,20 +5,22 @@ using ContosoCrafts.WebSite.Models;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+
     /// <summary>
-    /// The delete model page for the school
+    /// The delete Page responsible to delete a Product(School) data
     /// </summary>
     public class DeleteModel : PageModel
     {
-        // Data middletier
+
+        // Products data Service
         public JsonFileProductService ProductService { get; }
 
-        // Bind the data for the view
+        // Binding the data and ProductModel for the view
         [BindProperty]
         public ProductModel Product { get; set; }
 
         /// <summary>
-        /// Default Construtor for DeleteModel with middleware injected.
+        /// Default Construtor for DeleteModel with ProductService injected.
         /// </summary>
         /// <param name="productService">Product Service dependency injection</param>
         public DeleteModel(JsonFileProductService productService)
@@ -27,7 +29,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         }
 
         /// <summary>
-        /// REST Get request to show the info for the school to be deleted
+        /// REST Get request to show the information for the Product(school) to be deleted
         /// </summary>
         public void OnGet(string id)
         {
@@ -47,8 +49,11 @@ namespace ContosoCrafts.WebSite.Pages.Product
             }
 
             ProductService.DeleteData(Product.Id);
+
             // Redirect user to the Index page
             return RedirectToPage("./Index");
         }
+
     }
+
 }
