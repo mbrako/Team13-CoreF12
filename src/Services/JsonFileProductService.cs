@@ -10,20 +10,42 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
 {
-   public class JsonFileProductService
+
+    /// <summary>
+    /// Product Service to perform CRUD operations on the database
+    /// </summary>
+    public class JsonFileProductService
     {
+        // Initializing up the host environment 
+        public IWebHostEnvironment WebHostEnvironment 
+        { 
+            get; 
+        }
+
+        /// <summary>
+        /// Default Constructor with IWebHostEnvironment dependency injection
+        /// </summary>
+        /// <param name="webHostEnvironment"></param>
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
 
-        public IWebHostEnvironment WebHostEnvironment { get; }
-
+        /// <summary>
+        /// Getting the JSON database file name
+        /// </summary>
         private string JsonFileName
         {
-            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
+            get 
+            { 
+                return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); 
+            }
         }
 
+        /// <summary>
+        /// Method to get data for all the products and read the whole content of the data file
+        /// </summary>
+        /// <returns>List of ProductModel</returns>
         public IEnumerable<ProductModel> GetAllData()
         {
             using(var jsonFileReader = File.OpenText(JsonFileName))
@@ -37,11 +59,12 @@ namespace ContosoCrafts.WebSite.Services
         }
 
         /// <summary>
-        /// Find the data record
+        /// Update method to save the modified data for existing record
+        /// Find the data record from the file
         /// Update the fields
-        /// Save to the data store
+        /// Save to the data file
         /// </summary>
-        /// <param name="data"></param>
+        /// <param name="data">Product data to be saved</param>
         public ProductModel UpdateData(ProductModel data)
         {
             var products = GetAllData();
@@ -67,6 +90,7 @@ namespace ContosoCrafts.WebSite.Services
 
             return productData;
         }
+
         /// <summary>
         /// Retrive a single product in the data storage
         /// </summary>
@@ -76,8 +100,9 @@ namespace ContosoCrafts.WebSite.Services
         {
             return GetAllData().FirstOrDefault(m => m.Id.Equals(id));
         }
+
         /// <summary>
-        /// Save All products data to storage
+        /// Save All products data to database file
         /// </summary>
         private void SaveData(IEnumerable<ProductModel> products)
         {
@@ -109,6 +134,12 @@ namespace ContosoCrafts.WebSite.Services
                 SchoolAddress = "Enter Complete School Address",
                 SchoolEmail = "Enter email",
                 SchoolContactInfo = "Enter School contact details",
+                LaptopQuantity = "0",
+                ProjectorsQuantity = "0",
+                SpeakersQuantity = "0",
+                SmartBoardsQuantity = "0",
+                TabletsQuantity = "0",
+                DigitalMarkersQuantity = "0",
             };
 
             // Get the current set, and append the new record to it becuase IEnumerable does not have Add
@@ -126,7 +157,8 @@ namespace ContosoCrafts.WebSite.Services
         /// <returns></returns>
         public ProductModel DeleteData(string id)
         {
-            // Get the current set, and append the new record to it
+
+            // Get the current set, and append the new record after removing the item to be deleted
             var dataSet = GetAllData();
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
 
@@ -137,9 +169,6 @@ namespace ContosoCrafts.WebSite.Services
             return data;
         }
 
-        public object AddRating(object value, int v)
-        {
-            throw new NotImplementedException();
-        }
     }
+
 }
