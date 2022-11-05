@@ -5,15 +5,19 @@ using System.Collections.Generic;
 
 namespace ContosoCrafts.WebSite.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
+
     /// <summary>
     /// Items Controller to call the service methods to execute the required request
     /// </summary>
+    [ApiController]
+    [Route("[controller]")]
     public class ItemsController : Controller
     {
+        // Items data Service
+        public JsonFileItemsService ItemsService { get; }
+
         /// <summary>
-        /// Default Constructor
+        /// Default Constructor with ItemsService dependency injection
         /// </summary>
         /// <param name="itemsService"></param>
         public ItemsController(JsonFileItemsService itemsService)
@@ -21,16 +25,18 @@ namespace ContosoCrafts.WebSite.Controllers
             ItemsService = itemsService;
         }
 
-        // Data Service
-        public JsonFileItemsService ItemsService { get; }
-
-        // Collection of the Data
+        /// <summary>
+        /// Collection of data of Items
+        /// </summary>
         [HttpGet]
         public IEnumerable<ItemsModel> Get()
         {
             return ItemsService.GetAllData();
         }
 
+        /// <summary>
+        /// Method to update the ratings of the items
+        /// </summary>
         [HttpPatch]
         public ActionResult Patch([FromBody] RatingRequest request)
         {
@@ -39,10 +45,15 @@ namespace ContosoCrafts.WebSite.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Request rating class to create a reference to save the product rating data.
+        /// </summary>
         public class RatingRequest
         {
             public string ProductId { get; set; }
             public int Rating { get; set; }
         }
+
     }
+
 }
