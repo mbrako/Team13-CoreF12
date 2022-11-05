@@ -7,16 +7,21 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+
     /// <summary>
     /// Read Page will return the school data for the id passed by the Index page
     /// </summary>
     public class ReadModel : PageModel
     {
-        // Data middletier
+
+        // Products(School) data Service
         public JsonFileProductService ProductService { get; }
 
+        // To Bind the data to ProductModel for the view
+        public ProductModel Product;
+
         /// <summary>
-        /// Defualt Construtor
+        /// Defualt Construtor for ReadModel with ProductService injected.
         /// </summary>
         /// <param name="productService"></param>
         public ReadModel(JsonFileProductService productService)
@@ -24,16 +29,15 @@ namespace ContosoCrafts.WebSite.Pages.Product
             ProductService = productService;
         }
 
-        // The data to show
-        public ProductModel Product;
-
         /// <summary>
-        /// REST Get request
+        /// REST Get request to get data for a given Product ID
         /// </summary>
         /// <param name="id"></param>
         public void OnGet(string id)
         {
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
         }
+
     }
+
 }
