@@ -10,21 +10,40 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
 {
+
+    /// <summary>
+    /// Items Service to perform CRUD operations on the database
+    /// </summary>
     public class JsonFileItemsService
     {
 
+        // Initializing up the host environment 
+        public IWebHostEnvironment WebHostEnvironment { get; }
+
+        /// <summary>
+        /// Default Constructor with IWebHostEnvironment dependency injection
+        /// </summary>
+        /// <param name="webHostEnvironment"></param>
         public JsonFileItemsService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
 
-        public IWebHostEnvironment WebHostEnvironment { get; }
-
+        /// <summary>
+        /// Getting the JSON database file name
+        /// </summary>
         private string JsonFileName
         {
-            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "items.json"); }
+            get 
+            { 
+                return Path.Combine(WebHostEnvironment.WebRootPath, "data", "items.json"); 
+            }
         }
 
+        /// <summary>
+        /// Method to get data for all the items and read the whole content of the data file
+        /// </summary>
+        /// <returns>List of ItemsModel</returns>
         public IEnumerable<ItemsModel> GetAllData()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
@@ -42,12 +61,13 @@ namespace ContosoCrafts.WebSite.Services
         /// 
         /// Take in the product ID and the rating
         /// If the rating does not exist, add it
-        /// Save the update
+        /// Save the updated rating
         /// </summary>
         /// <param name="productId"></param>
         /// <param name="rating"></param>
         public bool AddRating(string productId, int rating)
         {
+
             // If the ProductID is invalid, return
             if (string.IsNullOrEmpty(productId))
             {
@@ -58,6 +78,7 @@ namespace ContosoCrafts.WebSite.Services
 
             // Look up the product, if it does not exist, return
             var data = items.FirstOrDefault(x => x.Id.Equals(productId));
+
             if (data == null)
             {
                 return false;
@@ -109,11 +130,9 @@ namespace ContosoCrafts.WebSite.Services
                     items
                 );
             }
+
         }
 
-        internal object CreateData()
-        {
-            throw new NotImplementedException();
-        }
     }
+
 }
