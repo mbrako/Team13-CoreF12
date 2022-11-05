@@ -7,13 +7,21 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+
     /// <summary>
-    /// Index Page will return all the schools data to show
+    /// Index Page will return all the Products(schools) to show
     /// </summary>
     public class IndexModel : PageModel
     {
+
+        // Products(School) data Service
+        public JsonFileProductService ProductService { get; }
+
+        // Collection of data of Products(Schools)
+        public IEnumerable<ProductModel> Products { get; private set; }
+
         /// <summary>
-        /// Default Constructor
+        /// Default Constructor for IndexModel with ProductService injected.
         /// </summary>
         /// <param name="itemsService"></param>
         public IndexModel(JsonFileProductService productService)
@@ -21,18 +29,14 @@ namespace ContosoCrafts.WebSite.Pages.Product
             ProductService = productService;
         }
 
-        // Data Service
-        public JsonFileProductService ProductService { get; }
-
-        // Collection of the Data
-        public IEnumerable<ProductModel> Products { get; private set; }
-
         /// <summary>
-        /// REST OnGet, return all data
+        /// REST OnGet, return data for all Products(schools)
         /// </summary>
         public void OnGet()
         {
             Products = ProductService.GetAllData();
         }
+
     }
+
 }
