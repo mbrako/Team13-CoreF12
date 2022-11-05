@@ -8,16 +8,21 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+
     /// <summary>
-    /// Manage the Update of the data for a single record
+    /// To Manage the Update of the data for a single record
     /// </summary>
     public class UpdateModel : PageModel
     {
-        // Data middletier
+        // Products(School) data Service
         public JsonFileProductService ProductService { get; }
 
+        // To bind data to the model for the view and to save it later
+        [BindProperty]
+        public ProductModel Product { get; set; }
+
         /// <summary>
-        /// Defualt Construtor
+        /// Defualt Construtor for UpdateModel with ProductService injected.
         /// </summary>
         /// <param name="productService"></param>
         public UpdateModel(JsonFileProductService productService)
@@ -25,13 +30,8 @@ namespace ContosoCrafts.WebSite.Pages.Product
             ProductService = productService;
         }
 
-        // The data to show, bind to it for the post
-        [BindProperty]
-        public ProductModel Product { get; set; }
-
         /// <summary>
-        /// REST Get request
-        /// Loads the Data
+        /// REST Get request, this gets all Products and filters the data for given ID
         /// </summary>
         /// <param name="id"></param>
         public void OnGet(string id)
@@ -60,5 +60,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
 
             return RedirectToPage("./Index");
         }
+
     }
+
 }
