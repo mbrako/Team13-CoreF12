@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 namespace ContosoCrafts.WebSite.Models
 {
-    /// <summary>
-    /// School data entered by the user about the School
+    /// <summary> 
+    /// School data entered by the user about the school
     /// </summary>
     public class ProductModel
     {
@@ -21,12 +21,12 @@ namespace ContosoCrafts.WebSite.Models
         [StringLength (maximumLength: 150, MinimumLength = 5, ErrorMessage = "The School Address should have a length of more than {2} and less than {1}")]
         public string SchoolAddress { get; set; }
 
-        // The school address
-        [StringLength(maximumLength: 100, MinimumLength = 12, ErrorMessage = "The email should have a length of more than {2} and less than {1}")]
+        // The school's email
+        [StringLength(maximumLength: 100, MinimumLength = 12, ErrorMessage = "The  School Email should have a length of more than {2} and less than {1}")]
         public string SchoolEmail { get; set; }
 
-        // The schools phone number
-        [StringLength(maximumLength: 13, MinimumLength = 10, ErrorMessage = "The email should have a length of more than {2} and less than {1}")]
+        // The school's phone number (school contact info)
+        [StringLength(maximumLength: 13, MinimumLength = 10, ErrorMessage = "The School Phone Number should have a length of more than {2} and less than {1}")]
         public string SchoolContactInfo { get; set; }
 
         // The quantity of laptos needed
@@ -47,6 +47,7 @@ namespace ContosoCrafts.WebSite.Models
         // The quantity of digital markers needed
         public string DigitalMarkersQuantity { get; set; }
 
+        // To string method to display the items as a text string
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
 
 
