@@ -30,13 +30,16 @@ namespace UnitTests.Pages.Index
 
         #region OnGet
         [Test]
-        public void OnGet_Valid_Should_Return_Products(IndexModel pageModel)
+        public void OnGet_Valid_Should_Return_Products()
         {
+            // Arrange
+
+            // Act
             pageModel.OnGet();
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(5, pageModel.Items.ToList().Count);
+            Assert.AreEqual(6, pageModel.Items.ToList().Count);
         }
         #endregion OnGet
     }

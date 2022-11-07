@@ -75,6 +75,12 @@ namespace UnitTests
             JsonFileProductService productService;
 
             productService = new JsonFileProductService(TestHelper.MockWebHostEnvironment.Object);
+
+            ItemsService = new JsonFileItemsService(MockWebHostEnvironment.Object);
+
+            JsonFileItemsService itemsService;
+
+            itemsService = new JsonFileItemsService(TestHelper.MockWebHostEnvironment.Object);
         }
     }
 }
