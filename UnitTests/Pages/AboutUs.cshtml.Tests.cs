@@ -10,7 +10,7 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.AboutUs
 {
-    public class PrivacyTests
+    public class AboutUsTests
     {
         #region TestSetup
         public static AboutUsModel pageModel;
