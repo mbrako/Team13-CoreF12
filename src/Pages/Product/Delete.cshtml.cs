@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ContosoCrafts.WebSite.Services;
 using ContosoCrafts.WebSite.Models;
+using System;
+using static System.Collections.Specialized.BitVector32;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
@@ -15,13 +17,10 @@ namespace ContosoCrafts.WebSite.Pages.Product
         // Products data Service
         public JsonFileProductService ProductService { get; }
 
-        // Binding the data and ProductModel for the view
-        [BindProperty]
-        public ProductModel Product { get; set; }
-
         /// <summary>
         /// Default Construtor for DeleteModel with ProductService injected.
         /// </summary>
+        /// <param name="logger"></param>
         /// <param name="productService">Product Service dependency injection</param>
         public DeleteModel(JsonFileProductService productService)
         {
@@ -37,19 +36,26 @@ namespace ContosoCrafts.WebSite.Pages.Product
             Product = ProductService.GetProduct(id);
         }
 
+        // Binding the data and ProductModel for the view
+        [BindProperty]
+        public ProductModel Product { get; set; }
+
         /// <summary>
         /// REST Post request to delete existing school
         /// </summary>
         /// <returns>Redirect to Index Page after deletion</returns>
         public IActionResult OnPost()
         {
+            Console.WriteLine("Inside delete func");
             if (!ModelState.IsValid)
             {
+                Console.WriteLine("Model invalid state");
+                Console.WriteLine(ModelState.Values);
                 return Page();
             }
 
             ProductService.DeleteData(Product.Id);
-
+            Console.WriteLine("Product deleted");
             // Redirect user to the Index page
             return RedirectToPage("./Index");
         }

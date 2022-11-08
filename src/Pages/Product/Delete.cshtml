@@ -12,24 +12,28 @@
     <form method="post">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         @Html.HiddenFor(x => x.Product.Id)
+        @Html.HiddenFor(x => x.Product.SchoolName)
+        @Html.HiddenFor(x => x.Product.SchoolAddress)
+        @Html.HiddenFor(x => x.Product.SchoolEmail)
+        @Html.HiddenFor(x => x.Product.SchoolContactInfo)
 
         <div class="form-group">
-            <label asp-for="Product.SchoolName" class="control-label"></label>
+            <label asp-for="Product.SchoolName" class="control-label">School Name</label>
             <input asp-for="Product.SchoolName" class="form-control" disabled />
         </div>
 
         <div class="form-group">
-            <label asp-for="Product.SchoolAddress" class="control-label"></label>
+            <label asp-for="Product.SchoolAddress" class="control-label">School Address</label>
             <input asp-for="Product.SchoolAddress" class="form-control" disabled />
         </div>
 
         <div class="form-group">
-            <label asp-for="Product.SchoolContactInfo" class="control-label"></label>
+            <label asp-for="Product.SchoolContactInfo" class="control-label">School Contact Information</label>
             <input asp-for="Product.SchoolContactInfo" class="form-control" disabled />
         </div>
 
         <div class="form-group">
-            <label asp-for="Product.SchoolEmail" class="control-label"></label>
+            <label asp-for="Product.SchoolEmail" class="control-label">School Email</label>
             <input asp-for="Product.SchoolEmail" class="form-control" disabled />
         </div>
 
@@ -42,7 +46,8 @@
 
 </div>
 
-@section Scripts {
+@section Scripts
+{
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }

@@ -130,16 +130,16 @@ namespace ContosoCrafts.WebSite.Services
             var data = new ProductModel()
             {
                 Id = System.Guid.NewGuid().ToString(),
-                SchoolName = "Enter School Name",
-                SchoolAddress = "Enter Complete School Address",
-                SchoolEmail = "Enter email",
-                SchoolContactInfo = "Enter School contact details",
-                LaptopQuantity = "0",
-                ProjectorsQuantity = "0",
-                SpeakersQuantity = "0",
-                SmartBoardsQuantity = "0",
-                TabletsQuantity = "0",
-                DigitalMarkersQuantity = "0",
+                SchoolName = "",
+                SchoolAddress = "",
+                SchoolEmail = "",
+                SchoolContactInfo = "",
+                LaptopQuantity = 0,
+                ProjectorsQuantity = 0,
+                SpeakersQuantity = 0,
+                SmartBoardsQuantity = 0,
+                TabletsQuantity = 0,
+                DigitalMarkersQuantity = 0,
             };
 
             // Get the current set, and append the new record to it becuase IEnumerable does not have Add

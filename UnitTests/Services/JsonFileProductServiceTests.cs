@@ -91,10 +91,10 @@ namespace UnitTests.Services
             var last = TestHelper.ProductService.GetAllData().Last();
 
             // Assert
-            Assert.AreEqual("Enter School Name", result.SchoolName);
-            Assert.AreEqual("Enter Complete School Address", result.SchoolAddress);
-            Assert.AreEqual("Enter School contact details", result.SchoolContactInfo);
-            Assert.AreEqual("Enter email", result.SchoolEmail);
+            Assert.AreEqual("", result.SchoolName);
+            Assert.AreEqual("", result.SchoolAddress);
+            Assert.AreEqual("", result.SchoolContactInfo);
+            Assert.AreEqual("", result.SchoolEmail);
             Assert.AreEqual(result.Id, last.Id);
         }
         #endregion CreateData

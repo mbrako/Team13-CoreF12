@@ -5,12 +5,12 @@
     "SchoolAddress": "2445 3rd Ave S, Seattle, WA 98134",
     "SchoolEmail": "seattlepublic@edu.com",
     "SchoolContactInfo": "\u002B1 2066667889",
-    "LaptopQuantity": "2",
-    "ProjectorsQuantity": "0",
-    "SpeakersQuantity": "0",
-    "SmartBoardsQuantity": "0",
-    "TabletsQuantity": "0",
-    "DigitalMarkersQuantity": "0"
+    "LaptopQuantity": 2,
+    "ProjectorsQuantity": 0,
+    "SpeakersQuantity": 0,
+    "SmartBoardsQuantity": 0,
+    "TabletsQuantity": 0,
+    "DigitalMarkersQuantity": 0
   },
   {
     "Id": "34",
@@ -18,12 +18,12 @@
     "SchoolAddress": "12th Ave, Madison Street, Seattle WA",
     "SchoolEmail": "Mcdonlad@edu.com",
     "SchoolContactInfo": "\u002B1 2345436776",
-    "LaptopQuantity": "0",
-    "ProjectorsQuantity": "5",
-    "SpeakersQuantity": "0",
-    "SmartBoardsQuantity": "0",
-    "TabletsQuantity": "0",
-    "DigitalMarkersQuantity": "0"
+    "LaptopQuantity": 2,
+    "ProjectorsQuantity": 0,
+    "SpeakersQuantity": 0,
+    "SmartBoardsQuantity": 0,
+    "TabletsQuantity": 0,
+    "DigitalMarkersQuantity": 0
   },
   {
     "Id": "35",
@@ -31,12 +31,12 @@
     "SchoolAddress": "2225 5th Ave S, Seattle, WA 98114",
     "SchoolEmail": "Mercer@edu.com",
     "SchoolContactInfo": "\u002B1 2066667500",
-    "LaptopQuantity": "0",
-    "ProjectorsQuantity": "5",
-    "SpeakersQuantity": "6",
-    "SmartBoardsQuantity": "0",
-    "TabletsQuantity": "0",
-    "DigitalMarkersQuantity": "0"
+    "LaptopQuantity": 2,
+    "ProjectorsQuantity": 0,
+    "SpeakersQuantity": 0,
+    "SmartBoardsQuantity": 0,
+    "TabletsQuantity": 0,
+    "DigitalMarkersQuantity": 0
   },
   {
     "Id": "38",
@@ -44,11 +44,11 @@
     "SchoolAddress": "12th Ave, Madison Street, Seattle WA",
     "SchoolEmail": "rainbow@edu.com",
     "SchoolContactInfo": "\u002B1 2345436776",
-    "LaptopQuantity": "0",
-    "ProjectorsQuantity": "3",
-    "SpeakersQuantity": "6",
-    "SmartBoardsQuantity": "0",
-    "TabletsQuantity": "0",
-    "DigitalMarkersQuantity": "10"
+    "LaptopQuantity": 2,
+    "ProjectorsQuantity": 0,
+    "SpeakersQuantity": 0,
+    "SmartBoardsQuantity": 0,
+    "TabletsQuantity": 0,
+    "DigitalMarkersQuantity": 0
   }
 ]
