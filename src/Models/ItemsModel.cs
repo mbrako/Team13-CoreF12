@@ -30,17 +30,11 @@ namespace ContosoCrafts.WebSite.Models
         // Ratings for the item which is a trace from the Contosco Crafts Website
         public int[] Ratings { get; set; }
 
-        // An enum to describe the the item category (tag)
-        public ProductTypeEnum ProductType { get; set; } = ProductTypeEnum.Undefined;
-
         public string Quantity { get; set; }
 
         // Item price which is a trace from the Contosco Crafts Website
         [Range(-1, 100, ErrorMessage = "Value for {0} must be between {1} and {2}.")]
         public int Price { get; set; }
-
-        // Store the Comments entered by the users on this items
-        public List<CommentModel> CommentList { get; set; } = new List<CommentModel>();
 
         // To string method to display the item as a text string
         public override string ToString() => JsonSerializer.Serialize<ItemsModel>(this);
