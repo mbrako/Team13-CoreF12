@@ -5,7 +5,7 @@ using ContosoCrafts.WebSite.Pages.Product;
 
 namespace UnitTests.Pages.Product.Read
 {
-    public class ReadTests
+    public class ReadTest
     {
         #region TestSetup
         public static ReadModel pageModel;
