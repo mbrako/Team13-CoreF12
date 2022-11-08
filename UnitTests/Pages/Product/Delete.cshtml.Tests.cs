@@ -12,7 +12,7 @@ namespace UnitTests.Pages.Product.Delete
 {
     public class DeleteTests
     {
-        #region TestSetup`  `
+        #region TestSetup
         public static DeleteModel pageModel;
 
         [SetUp]
@@ -69,7 +69,7 @@ namespace UnitTests.Pages.Product.Delete
             // Arrange
 
             // Force an invalid error state
-            pageModel.ModelState.AddModelError("bogus", "bogus error");
+            pageModel.ModelState.AddModelError("Error", "Error");
 
             // Act
             var result = pageModel.OnPost() as ActionResult;
