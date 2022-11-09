@@ -25,35 +25,6 @@ namespace ContosoCrafts.WebSite.Controllers
             ItemsService = itemsService;
         }
 
-        /// <summary>
-        /// Collection of data of Items
-        /// </summary>
-        [HttpGet]
-        public IEnumerable<ItemsModel> Get()
-        {
-            return ItemsService.GetAllData();
-        }
-
-        /// <summary>
-        /// Method to update the ratings of the items
-        /// </summary>
-        [HttpPatch]
-        public ActionResult Patch([FromBody] RatingRequest request)
-        {
-            ItemsService.AddRating(request.ProductId, request.Rating);
-
-            return Ok();
-        }
-
-        /// <summary>
-        /// Request rating class to create a reference to save the product rating data.
-        /// </summary>
-        public class RatingRequest
-        {
-            public string ProductId { get; set; }
-            public int Rating { get; set; }
-        }
-
     }
 
 }
