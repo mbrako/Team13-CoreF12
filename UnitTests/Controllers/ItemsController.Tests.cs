@@ -31,13 +31,13 @@
         #endregion TestSetup
 
 
-        #region GetAllData
+        #region Get
 
         /// <summary>
         /// Test of invalid state for GetAllData method
         /// </summary>
         [Test]
-        public void GetAllData_Invalid_Does_Not_Return_Null_Or_Empty_Should_Return_False()
+        public void Get_Invalid_Does_Not_Return_Null_Or_Empty_Should_Return_False()
         {
             // Arrange
 
@@ -52,7 +52,7 @@
         /// Test for valid result of GetAllData method
         /// </summary>
         [Test]
-        public void GetAllData_Valid_Returns_Contents_Of_Json_File_Should_Return_True()
+        public void Get_Valid_Returns_Contents_Of_Json_File_Should_Return_True()
         {
             // Arrange
 
@@ -72,7 +72,7 @@
             Assert.AreEqual(expected.ToString(), result.ToString());
         }
 
-        #endregion GetAllData
+        #endregion Get
 
     }
 }
