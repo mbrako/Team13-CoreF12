@@ -10,10 +10,21 @@ using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Pages.Product.Delete
 {
+    /// <summary>
+    /// This class holds the tests for the Delete.cshtml.Tests.cs.
+    /// </summary>
     public class DeleteTests
     {
         #region TestSetup
+
+        // Data field to hold page model specific to the Delete function
         public static DeleteModel pageModel;
+
+
+
+        /// <summary>
+        /// Setup test prior to execution.
+        /// </summary>
 
         [SetUp]
         public void TestInitialize()
@@ -26,6 +37,10 @@ namespace UnitTests.Pages.Product.Delete
         #endregion TestSetup
 
         #region OnGet
+
+        /// <summary>
+        /// Test a valid result for OnGet method
+        /// </summary>
         [Test]
         public void OnGet_Valid_Should_Return_ProductToDelete()
         {
@@ -41,6 +56,11 @@ namespace UnitTests.Pages.Product.Delete
         #endregion OnGet
 
         #region OnPost
+
+
+        /// <summary>
+        /// Test a valid result for OnPost method
+        /// </summary>
         [Test]
         public void OnPost_Valid_Should_DeleteProduct()
         {
@@ -63,6 +83,10 @@ namespace UnitTests.Pages.Product.Delete
             Assert.AreEqual(null, TestHelper.ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(pageModel.Product.Id)));
         }
 
+
+        /// <summary>
+        /// Test an invalid result for OnPost method
+        /// </summary>
         [Test]
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
