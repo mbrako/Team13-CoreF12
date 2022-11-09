@@ -17,12 +17,17 @@ using ContosoCrafts.WebSite.Services;
 
 namespace UnitTests.Models
 {
+    /// <summary>
+    /// Test class for ProductModel
+    /// </summary>
     public class ProductModelTests
     {
         #region TestSetup
 
 
-
+        /// <summary>
+        /// Setup test prior to execution
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -33,7 +38,9 @@ namespace UnitTests.Models
         #endregion TestSetup
 
 
-
+        /// <summary>
+        /// Method to test valid input of a school name
+        /// </summary>
 
         [Test]
         public void ProductModel_Valid_ToString_Should_Return_String()
