@@ -25,6 +25,15 @@ namespace ContosoCrafts.WebSite.Controllers
             ItemsService = itemsService;
         }
 
+        /// <summary>
+        /// Collection of data of Items
+        /// </summary>
+        [HttpGet]
+        public IEnumerable<ItemsModel> Get()
+        {
+            return ItemsService.GetAllData();
+        }
+
     }
 
 }
