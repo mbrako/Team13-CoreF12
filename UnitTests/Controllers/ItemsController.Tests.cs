@@ -12,7 +12,7 @@
     using NUnit.Framework;
 
     /// <summary>
-    /// This class holds the tests for the main JsonFileProductService class.
+    /// This class holds the tests for the ItemsController class.
     /// </summary>
     public class ItemsControllerTests
     {
@@ -21,7 +21,7 @@
 
 
         /// <summary>
-        /// Initialize tests for ProductController class
+        /// Initialize tests for Items Controller class
         /// </summary>
         [SetUp]
         public void TestInitialize()
