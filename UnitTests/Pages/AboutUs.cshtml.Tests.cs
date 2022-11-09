@@ -10,11 +10,17 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.AboutUs
 {
+    /// <summary>
+    /// This class holds the tests for the AboutUs.cshtml.Tests.cs.
+    /// </summary>
     public class AboutUsTests
     {
         #region TestSetup
         public static AboutUsModel pageModel;
 
+        /// <summary>
+        /// Setup test prior to execution.
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -30,6 +36,11 @@ namespace UnitTests.Pages.AboutUs
         #endregion TestSetup
 
         #region OnGet
+
+
+        /// <summary>
+        /// Test a valid result from the OnGet method
+        /// </summary>
         [Test]
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
