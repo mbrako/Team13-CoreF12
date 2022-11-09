@@ -9,11 +9,18 @@ using System;
 
 namespace UnitTests.Pages.Product.Update
 {
+    /// <summary>
+    /// This class holds the tests for the Update.cshtml.Tests.cs.
+    /// </summary>
     public class UpdateTests
     {
         #region TestSetup
         public static UpdateModel pageModel;
 
+
+        /// <summary>
+        /// Setup test prior to execution.
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -25,6 +32,10 @@ namespace UnitTests.Pages.Product.Update
         #endregion TestSetup
 
         #region OnGet
+
+        /// <summary>
+        /// Test a valid result from the OnGet method
+        /// </summary>
         [Test]
         public void OnGet_Valid_Should_Return_Products()
         {
@@ -53,6 +64,10 @@ namespace UnitTests.Pages.Product.Update
         #endregion OnGet
 
         #region OnPostAsync
+
+        /// <summary>
+        /// Test valid result from OnPost method
+        /// </summary>
         [Test]
         public void OnPostAsync_Valid_Should_Return_Products()
         {
@@ -68,6 +83,9 @@ namespace UnitTests.Pages.Product.Update
             Assert.AreEqual(true, result.PageName.Contains("Index"));
         }
 
+        /// <summary>
+        /// Test an invalid result with OnPost method
+        /// </summary>
         [Test]
         public void OnPostAsync_InValid_Model_NotValid_Return_Page()
         {
@@ -90,6 +108,9 @@ namespace UnitTests.Pages.Product.Update
             Assert.AreEqual(false, pageModel.ModelState.IsValid);
         }
 
+        /// <summary>
+        /// Test a bogus result with OnPost method
+        /// </summary>
         [Test]
         public void OnPostAsync_Bogus_Value_Return_Null_Page()
         {
