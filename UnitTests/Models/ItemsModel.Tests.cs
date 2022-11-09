@@ -17,12 +17,17 @@ using ContosoCrafts.WebSite.Services;
 
 namespace UnitTests.Models
 {
+    /// <summary>
+    /// Test class for ItemsModel
+    /// </summary>
     public class ItemsModelTests
     {
         #region TestSetup
 
 
-
+        /// <summary>
+        /// Setup test prior to execution
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -31,8 +36,6 @@ namespace UnitTests.Models
 
 
         #endregion TestSetup
-
-
 
 
         [Test]
