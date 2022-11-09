@@ -31,19 +31,39 @@
     public class CreateTests
     {
         #region TestSetup
+        // A factory for creating IUrlHelper instances.
         public static IUrlHelperFactory urlHelperFactory;
+
+        // Represents an implementation of the HTTP Context class.
         public static DefaultHttpContext httpContextDefault;
+
+        // Provides information about the web hosting environment an application is running in.
         public static IWebHostEnvironment webHostEnvironment;
+
+        // Represents the state of an attempt to bind a posted form to an action method, which includes validation information.
         public static ModelStateDictionary modelState;
+
+        // Context object for execution of action which has been selected as part of an HTTP request.
         public static ActionContext actionContext;
+
+        // Represents an empty model metadata provider.
         public static EmptyModelMetadataProvider modelMetadataProvider;
+
+        // Represents a container that is used to pass data between a controller and a view.
         public static ViewDataDictionary viewData;
+
+        // Represents a container that is used to pass data between a controller and a view.
         public static TempDataDictionary tempData;
+
+        // The SharePoint page context object.
         public static PageContext pageContext;
+
+        // Data field for page model
         public static NewRequestModel pageModel;
 
-
-
+        /// <summary>
+        /// Setup test prior to execution.
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -100,6 +120,10 @@
 
 
         #region OnGet
+
+        /// <summary>
+        /// Confirm valid operation of OnGet method.
+        /// </summary>
         [Test]
         public void OnGet_Valid_Should_Return_True()
         {
