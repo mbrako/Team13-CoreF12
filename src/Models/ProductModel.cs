@@ -57,6 +57,8 @@ namespace ContosoCrafts.WebSite.Models
         [Range(0, 1000)]
         public int DigitalMarkersQuantity { get; set; }
 
+        public string action { get; set; }
+
         // To string method to display the items as a text string
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
 
