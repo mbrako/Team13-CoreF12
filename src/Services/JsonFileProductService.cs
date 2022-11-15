@@ -85,6 +85,7 @@ namespace ContosoCrafts.WebSite.Services
             productData.SmartBoardsQuantity = data.SmartBoardsQuantity;
             productData.TabletsQuantity = data.TabletsQuantity;
             productData.DigitalMarkersQuantity = data.DigitalMarkersQuantity;
+            productData.action = "update";
 
             SaveData(products);
 
@@ -140,6 +141,7 @@ namespace ContosoCrafts.WebSite.Services
                 SmartBoardsQuantity = 0,
                 TabletsQuantity = 0,
                 DigitalMarkersQuantity = 0,
+                action = "create",
             };
 
             // Get the current set, and append the new record to it becuase IEnumerable does not have Add

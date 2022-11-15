@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
+using System.Xml.Linq;
+using System;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
@@ -58,7 +60,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
                 return null;
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Index", true);
         }
 
     }

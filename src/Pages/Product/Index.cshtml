@@ -18,10 +18,13 @@
         <tbody>
                 @foreach (var product in Model.Products)
             {
-                <tr>
-                    <td>@product.SchoolName</td>
-                    <td><a asp-page="Read" asp-route-id="@product.Id">Read</a></td>
-                </tr>
+                @if (product.action == "update")
+                {
+                    <tr>
+                        <td>@product.SchoolName</td>
+                        <td><a asp-page="Read" asp-route-id="@product.Id">Read</a></td>
+                    </tr>
+                }
             }
         </tbody>
         </table>
