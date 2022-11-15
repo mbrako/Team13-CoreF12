@@ -75,7 +75,9 @@
         #endregion GetAllData
 
         #region AddRating
-
+        /// <summary>
+        /// Testing invalid null input for AddRating method
+        /// </summary>
         [Test]
         public void AddRating_InValid_Product_Null_Should_Return_False()
         {
@@ -87,7 +89,9 @@
             // Assert
             Assert.AreEqual(false, result);
         }
-
+        /// <summary>
+        /// Testing invalid empty string input for AddRating method
+        /// </summary>
         [Test]
         public void AddRating_InValid_Product_Empty_Should_Return_False()
         {
@@ -99,7 +103,9 @@
             // Assert
             Assert.AreEqual(false, result);
         }
-
+        /// <summary>
+        /// Testing typical, valid usage of AddRating method
+        /// </summary>
         [Test]
         public void AddRating_Valid_Product_Rating_5_Should_Return_True()
         {
@@ -118,7 +124,9 @@
             Assert.AreEqual(countOriginal + 1, dataNewList.Ratings.Length);
             Assert.AreEqual(5, dataNewList.Ratings.Last());
         }
-
+        /// <summary>
+        /// Testing invalid, too below zero rating value for AddRating method
+        /// </summary>
         [Test]
         public void AddRating_InValid_Rating_below_zero_Should_Return_False()
         {
@@ -130,7 +138,9 @@
             // Assert
             Assert.AreEqual(false, result);
         }
-
+        /// <summary>
+        /// Testing invalid, above five rating value for AddRating method
+        /// </summary>
         [Test]
         public void AddRating_InValid_Rating_above_five_Should_Return_False()
         {
@@ -142,7 +152,9 @@
             // Assert
             Assert.AreEqual(false, result);
         }
-
+        /// <summary>
+        /// Testing for creation of ratings array is provided to AddRating method
+        /// </summary>
         [Test]
         public void AddRating_Valid_Product_if_rating_does_not_exist_create_rating_array_return_true()
         {
@@ -160,7 +172,9 @@
             Assert.AreEqual(1, dataNewList.Ratings.Length);
             Assert.AreEqual(5, dataNewList.Ratings.First());
         }
-
+        /// <summary>
+        /// Testing invalid, if null data was given as product ID for AddRating method
+        /// </summary>
         [Test]
         public void AddRating_InValid_if_data_null_for_given_productId_should_return_false()
         {
