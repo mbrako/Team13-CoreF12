@@ -85,14 +85,14 @@ a {
 
 .btn-primary {
     color: #fff;
-    background-color: #252152;
-    border-color: #252152;
+    background-color: #695b18;
+    border-color: #695b18;
 }
 
     .btn-primary:hover {
         color: #fff;
-        background-color: #e9a8a6;
-        border-color: #e9a8a6;
+        background-color: #112f40;
+        border-color: #112f40;
     }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -140,18 +140,19 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
+    background-color: #80ab76 ;
 }
 
 p {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', helvetica;
 }
 
 h1 {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', helvetica;
 }
 
 ul {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', helvetica;
 }
 
 .footer {
@@ -160,7 +161,7 @@ ul {
     width: 100%;
     white-space: nowrap;
     line-height: 60px; /* Vertically center the text there */
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', helvetica;
 }
 /*Backgrounds*/
 .bg-navbar {
