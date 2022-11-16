@@ -57,6 +57,7 @@ namespace ContosoCrafts.WebSite.Models
         [Range(0, 1000)]
         public int DigitalMarkersQuantity { get; set; }
 
+        // The action field indicates that the recorded is under create or already created and ready to be updated
         public string action { get; set; }
 
         // To string method to display the items as a text string
