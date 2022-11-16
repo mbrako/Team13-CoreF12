@@ -10,17 +10,24 @@ using ContosoCrafts.WebSite.Services;
 
 namespace UnitTests.Components
 {
+    /// <summary>
+    /// Productlist test set.
+    /// </summary>
     public class ProductListTests : BunitTestContext
     {
         #region TestSetup
-
+        /// <summary>
+        /// Initialize the test set 
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
         }
 
         #endregion TestSetup
-
+        /// <summary>
+        /// Test for returning list of products.
+        /// </summary>
         [Test]
         public void ProductList_Default_Should_Return_Content()
         {
