@@ -140,7 +140,7 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    background-color: #80ab76 ;
+    background-color: #f2eddc;
 }
 
 p {
@@ -165,17 +165,17 @@ ul {
 }
 /*Backgrounds*/
 .bg-navbar {
-    background: -webkit-linear-gradient(110deg, #ADFF2F 60%, #ADFF2F 60%);
-    background: -o-linear-gradient(110deg, #ADFF2F 60%, #ADFF2F 60%);
-    background: -moz-linear-gradient(110deg, #ADFF2F 60%, #ADFF2F 60%);
-    background: linear-gradient(110deg, #ADFF2F 60%, #ADFF2F 60%);
+    background: -webkit-linear-gradient(300deg, #f5eed7 10%, #453607);
+    background: -o-linear-gradient(300deg, #f5eed7 10%, #453607);
+    background: -moz-linear-gradient(300deg, #f5eed7 10%, #453607);
+    background: linear-gradient(300deg, #f5eed7 10%, #453607);
 }
 
 .bg-footer {
-    background: -webkit-linear-gradient(110deg, #ADFF2F 60%, #ADFF2F 60%);
-    background: -o-linear-gradient(110deg, #ADFF2F 60%, #ADFF2F 60%);
-    background: -moz-linear-gradient(110deg, #ADFF2F 60%, #ADFF2F 60%);
-    background: linear-gradient(110deg, #ADFF2F 60%, #ADFF2F 60%);
+    background: -webkit-linear-gradient(300deg, #f5eed7, #453607 40%);
+    background: -o-linear-gradient(300deg, #f5eed7, #453607 40%);
+    background: -moz-linear-gradient(300deg, #f5eed7, #453607 40%);
+    background: linear-gradient(300deg, #f5eed7, #453607 40%);
 }
 
 .navbar-fixed-top {
