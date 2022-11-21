@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
+using System;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
@@ -33,9 +35,16 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// REST Get request to get data for a given Product ID
         /// </summary>
         /// <param name="id"></param>
-        public void OnGet(string id)
+        public IActionResult OnGet(string id)
         {
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+
+            if (Product == null)
+            {
+                return RedirectToPage("./Index");
+            }
+
+            return Page();
         }
 
     }
