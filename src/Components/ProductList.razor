@@ -6,14 +6,14 @@
 <div class="card-columns">
     @foreach (var item in ItemsService.GetAllData())
     {
-        <div class="card">
+        <div class="card mt-4">
             <div class="card-img" style="background-image: url('@item.Image');">
             </div>
             <div class="overlay">
                 <div class="text">@item.Description</div>
             </div>
             <div class="card-footer">
-                    <h5 class="card-title">@item.Title</h5>
+                    <h6 class="card-title">@item.Title</h6>
             </div>
         </div>
 
