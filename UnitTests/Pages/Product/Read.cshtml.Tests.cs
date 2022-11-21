@@ -57,6 +57,18 @@ namespace UnitTests.Pages.Product.Read
             Assert.IsNotNull(dogString);
         }
 
+        /// <summary>
+        /// Test to check if bogus id is added
+        /// </summary>
+        [Test]
+        public void OnGet_InValid_Should_Return_Index_Page()
+        {
+            // Arrange
+            // Act
+            pageModel.OnGet("Test");
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+        }
         #endregion OnGet
     }
 }
