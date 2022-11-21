@@ -181,6 +181,7 @@ ul {
 .navbar-fixed-top {
     position: sticky !important;
     top: 0;
+    z-index: 999;
 }
 
 .update-form {
