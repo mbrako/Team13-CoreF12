@@ -6,6 +6,17 @@
     ViewData["Title"] = "Update Page";
 }
 
+<script type="text/javascript">
+    function ValidAlphabet(){
+        var code = (event.which) ? event.which : event.keyCode;
+        if((code >= 65 && code <= 90)  || 
+        (code >= 97 && code <= 122) || (code == 32))
+        {return true;}
+        else
+        {return false;}
+    }
+</script>
+
 <div class="content">
 
   <div class="container update-form">
@@ -15,13 +26,13 @@
 
         <div class="form-group">
             <label asp-for="Product.SchoolName" class="control-label"> School Name</label>
-                <input asp-for="Product.SchoolName" placeholder="Enter School Name"  class="form-control" />
+                <input asp-for="Product.SchoolName" placeholder="Enter School Name" class="form-control" onkeypress="return ValidAlphabet()" />
             <span asp-validation-for="Product.SchoolName" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label asp-for="Product.SchoolAddress" class="control-label">School Address</label>
-                <input asp-for="Product.SchoolAddress" placeholder="Enter Complete School Address"  class="form-control" />
+                <input asp-for="Product.SchoolAddress" placeholder="Enter Complete School Address" class="form-control" onkeypress="return ValidAlphabet()" />
             <span asp-validation-for="Product.SchoolAddress" class="text-danger"></span>
         </div>
 
