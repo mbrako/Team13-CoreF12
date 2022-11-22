@@ -15,6 +15,7 @@ namespace ContosoCrafts.WebSite.Models
 
         // The school name
         [Required]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Only alphabets allowed")]
         [StringLength(maximumLength: 100, MinimumLength = 1, ErrorMessage = "The School Name should have a length of more than {2} and less than {1}")]
         public string SchoolName { get; set; }
 
