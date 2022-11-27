@@ -4,11 +4,8 @@
     using System.IO;
     using System.Linq;
     using System.Text.Json;
-
     using Bunit.Extensions;
-
     using ContosoCrafts.WebSite.Models;
-
     using NUnit.Framework;
 
     /// <summary>
@@ -75,6 +72,7 @@
         #endregion GetAllData
 
         #region AddRating
+
         /// <summary>
         /// Testing invalid null input for AddRating method
         /// </summary>
@@ -89,6 +87,7 @@
             // Assert
             Assert.AreEqual(false, result);
         }
+
         /// <summary>
         /// Testing invalid empty string input for AddRating method
         /// </summary>
@@ -103,6 +102,7 @@
             // Assert
             Assert.AreEqual(false, result);
         }
+
         /// <summary>
         /// Testing typical, valid usage of AddRating method
         /// </summary>
@@ -124,6 +124,7 @@
             Assert.AreEqual(countOriginal + 1, dataNewList.Ratings.Length);
             Assert.AreEqual(5, dataNewList.Ratings.Last());
         }
+
         /// <summary>
         /// Testing invalid, too below zero rating value for AddRating method
         /// </summary>
@@ -138,6 +139,7 @@
             // Assert
             Assert.AreEqual(false, result);
         }
+
         /// <summary>
         /// Testing invalid, above five rating value for AddRating method
         /// </summary>
@@ -152,6 +154,7 @@
             // Assert
             Assert.AreEqual(false, result);
         }
+
         /// <summary>
         /// Testing for creation of ratings array is provided to AddRating method
         /// </summary>
@@ -172,6 +175,7 @@
             Assert.AreEqual(1, dataNewList.Ratings.Length);
             Assert.AreEqual(5, dataNewList.Ratings.First());
         }
+
         /// <summary>
         /// Testing invalid, if null data was given as product ID for AddRating method
         /// </summary>
