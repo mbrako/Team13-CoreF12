@@ -1,18 +1,8 @@
 ﻿using System.Linq;
-
-
-
 using Microsoft.Extensions.DependencyInjection;
-
-
-
 using Bunit;
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Models;
-
-
-
-//using ContosoCrafts.WebSite.Components;
 using ContosoCrafts.WebSite.Services;
 
 namespace UnitTests.Models
@@ -36,8 +26,9 @@ namespace UnitTests.Models
 
 
         #endregion TestSetup
-
-
+        /// <summary>
+        /// Test case to verify the item in list of items
+        /// </summary>
         [Test]
         public void ItemsModel_Valid_ToString_Should_Return_String()
         {
