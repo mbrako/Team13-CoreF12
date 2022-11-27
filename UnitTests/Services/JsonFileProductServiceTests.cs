@@ -4,11 +4,8 @@ namespace UnitTests.Services
     using System.IO;
     using System.Linq;
     using System.Text.Json;
-
     using Bunit.Extensions;
-
     using ContosoCrafts.WebSite.Models;
-
     using NUnit.Framework;
 
     /// <summary>
@@ -19,7 +16,6 @@ namespace UnitTests.Services
 
         #region TestSetup
 
-
         /// <summary>
         /// Initialize tests for JsonFileProductService class
         /// </summary>
@@ -29,7 +25,6 @@ namespace UnitTests.Services
         }
 
         #endregion TestSetup
-
 
         #region GetAllData
 
@@ -73,9 +68,7 @@ namespace UnitTests.Services
         }
 
         #endregion GetAllData
-
         
-
         #region CreateData
 
         /// <summary>
@@ -122,10 +115,6 @@ namespace UnitTests.Services
             Assert.AreEqual(data2.SchoolName, result.SchoolName);
         }
 
-
-
         #endregion UpdateData
-
-
     }
 }
