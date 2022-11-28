@@ -12,6 +12,9 @@ namespace UnitTests.Pages.Startup
     {
         #region TestSetup
 
+        /// <summary>
+        /// Initializing the Test for Startup.cs
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -26,10 +29,11 @@ namespace UnitTests.Pages.Startup
         }
         #endregion TestSetup
 
+        #region ConfigureServices
+
         /// <summary>
         /// Testing the configured services
         /// </summary>
-        #region ConfigureServices
         [Test]
         public void Startup_ConfigureServices_Valid_Defaut_Should_Pass()
         {
@@ -38,10 +42,11 @@ namespace UnitTests.Pages.Startup
         }
         #endregion ConfigureServices
 
+        #region Configure
+
         /// <summary>
         /// Testing the configuration
         /// </summary>
-        #region Configure
         [Test]
         public void Startup_Configure_Valid_Defaut_Should_Pass()
         {
