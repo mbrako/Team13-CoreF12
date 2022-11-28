@@ -54,5 +54,19 @@
     "TabletsQuantity": 0,
     "DigitalMarkersQuantity": 0,
     "action": "update"
+  },
+  {
+    "Id": "ee6d64a0-f394-4540-b9c8-3be24431903c",
+    "SchoolName": "",
+    "SchoolAddress": "",
+    "SchoolEmail": "",
+    "SchoolContactInfo": "",
+    "LaptopQuantity": 0,
+    "ProjectorsQuantity": 0,
+    "SpeakersQuantity": 0,
+    "SmartBoardsQuantity": 0,
+    "TabletsQuantity": 0,
+    "DigitalMarkersQuantity": 0,
+    "action": "create"
   }
 ]

@@ -1,7 +1,13 @@
 @using ContosoCrafts.WebSite.Models
 @using ContosoCrafts.WebSite.Services
 @using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Forms
 @inject JsonFileItemsService ItemsService
+
+<EditForm Model="@search" OnValidSubmit="@SelectProduct">
+    <InputText id="name" @bind-Value="search.Name" />
+    <button type="submit" data-toggle="modal" data-target="#productModal" class="btn btn-primary">Submit</button>
+</EditForm>
 
 <div class="card-columns">
     @foreach (var item in ItemsService.GetAllData())
@@ -13,9 +19,62 @@
                 <div class="text">@item.Description</div>
             </div>
             <div class="card-footer">
-                    <h6 class="card-title">@item.Title</h6>
+                <h6 class="card-title">@item.Title</h6>
             </div>
         </div>
 
     }
 </div>
+
+@if (items != null)
+{
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productTitle">Filtered</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Item Name</th>
+                                    <th>Information</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    @foreach (var item in items)
+                                {
+                                        <tr>
+                                            <td>@item.Title</td>
+                                            <td>@item.Description</td>
+                                        </tr>
+                                }
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@code
+{
+    public IEnumerable<ItemsModel> items;
+    private Search search = new();
+
+    void SelectProduct()
+    {
+        Console.WriteLine("inside select prodcut");
+        items = ItemsService.GetAllData().Where(s => s.Title.Contains(search.Name));
+    }
+}
