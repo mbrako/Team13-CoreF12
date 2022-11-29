@@ -1,12 +1,22 @@
 @using ContosoCrafts.WebSite.Models
 @using ContosoCrafts.WebSite.Services
+@using System.Linq;
+@using Microsoft.AspNetCore.Mvc.RazorPages;
+@using Microsoft.AspNetCore.Mvc;
+
 @using Microsoft.AspNetCore.Components.Web
 @using Microsoft.AspNetCore.Components.Forms
 @inject JsonFileItemsService ItemsService
 
 <EditForm Model="@search" OnValidSubmit="@SelectProduct">
-    <InputText id="name" @bind-Value="search.Name" />
-    <button type="submit" data-toggle="modal" data-target="#productModal" class="btn btn-primary">Submit</button>
+    <div class="row mb-4">
+    <InputText id="name" @bind-Value="search.Name" placeholder="Enter a search term" class="form-control col-md-4 mr-1" />
+        <button type="submit" data-toggle="modal" data-target="#productModal" class="btn btn-primary col-md-1">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+     <DataAnnotationsValidator />
+    <ValidationSummary />
 </EditForm>
 
 <div class="card-columns">
@@ -30,9 +40,9 @@
 {
     <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
+            <div class="modal-content dialog-color">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="productTitle">Filtered</h5>
+                    <h5 class="modal-title" id="productTitle">Search Results</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -40,7 +50,7 @@
                 <div class="modal-body">
                     <div class="card">
                         <div class="card-body">
-                        <table class="table table-bordered table-striped">
+                        <table class="table table-bordered table-striped table-dark">
                             <thead>
                                 <tr>
                                     <th>Item Name</th>
@@ -74,6 +84,7 @@
 
     void SelectProduct()
     {
+
         Console.WriteLine("inside select prodcut");
         items = ItemsService.GetAllData().Where(s => s.Title.Contains(search.Name));
     }
