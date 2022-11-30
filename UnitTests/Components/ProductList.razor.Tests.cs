@@ -7,6 +7,7 @@ using NUnit.Framework;
 
 using ContosoCrafts.WebSite.Components;
 using ContosoCrafts.WebSite.Services;
+using TestContext = Bunit.TestContext;
 
 namespace UnitTests.Components
 {
@@ -42,6 +43,32 @@ namespace UnitTests.Components
 
             // Assert
             Assert.AreEqual(true, result.Contains("Laptops: 128 laptops donated until now."));
+        }
+
+        /// <summary>
+        /// Test for returning list of products.
+        /// </summary>
+        [Test]
+        public void SearchProduct_Valid_ID_searchButton_Should_Return_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileItemsService>(TestHelper.ItemsService);
+            var id = "searchButton";
+
+            // Act
+            var page = RenderComponent<ProductList>();
+
+            var buttonList = page.FindAll("Button");
+
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+
+            button.Click();
+
+            // Get the Cards retrned
+            var result = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, result.Contains("The Name field is required"));
         }
     }
 }
